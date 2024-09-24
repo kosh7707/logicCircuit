@@ -1,0 +1,9 @@
+|halfadder
+Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
+A => CarryAnd.IN0
+A => SumXor.IN0
+B => CarryAnd.IN1
+B => SumXor.IN1
+Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
+
+
