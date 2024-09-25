@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Sep 24 19:36:19 2024
+Analysis & Synthesis Status : Successful - Wed Sep 25 14:02:03 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : LogicCircuit
-Top-level Entity Name : week3_ex3
+Top-level Entity Name : week4_ex5
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 0
-Total pins : 11
+Total registers : 8
+Total pins : 15
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

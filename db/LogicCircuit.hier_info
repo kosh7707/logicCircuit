@@ -1,58 +1,67 @@
-|week3_ex3
-LT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-A2 => twobitcomparator:inst.A0
-A3 => twobitcomparator:inst.A1
-B2 => twobitcomparator:inst.B0
-B3 => twobitcomparator:inst.B1
-A0 => twobitcomparator:inst1.A0
-A1 => twobitcomparator:inst1.A1
-B0 => twobitcomparator:inst1.B0
-B1 => twobitcomparator:inst1.B1
-EQ <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-GT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+|week4_ex5
+B0 <= fourbitregister:inst.Dout0
+Din0 => fourbitregister:inst.Din0
+Din1 => fourbitregister:inst.Din1
+Din2 => fourbitregister:inst.Din2
+Din3 => fourbitregister:inst.Din3
+Ce => fourbitregister:inst.Ce
+Ce => fourbitregister:inst1.Ce
+CLK => fourbitregister:inst.CLK
+CLK => fourbitregister:inst1.CLK
+RST => fourbitregister:inst.RST
+RST => fourbitregister:inst1.RST
+B1 <= fourbitregister:inst.Dout1
+B2 <= fourbitregister:inst.Dout2
+B3 <= fourbitregister:inst.Dout3
+A0 <= fourbitregister:inst1.Dout0
+A1 <= fourbitregister:inst1.Dout1
+A2 <= fourbitregister:inst1.Dout2
+A3 <= fourbitregister:inst1.Dout3
 
 
-|week3_ex3|twobitcomparator:inst
-LT <= inst16.DB_MAX_OUTPUT_PORT_TYPE
-A0 => inst2.IN0
-A0 => inst12.IN0
-A0 => inst8.IN0
-A0 => inst9.IN1
-B1 => inst6.IN1
-B1 => inst5.IN1
-B1 => inst11.IN1
-B1 => inst4.IN0
-B0 => inst6.IN2
-B0 => inst7.IN2
-B0 => inst12.IN1
-B0 => inst3.IN0
-A1 => inst.IN0
-A1 => inst11.IN0
-A1 => inst9.IN0
-A1 => inst10.IN0
-EQ <= inst15.DB_MAX_OUTPUT_PORT_TYPE
-GT <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+|week4_ex5|fourbitregister:inst
+Dout0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+RST => inst.ACLR
+RST => inst2.ACLR
+RST => inst3.ACLR
+RST => inst4.ACLR
+Din0 => inst.DATAIN
+CLK => inst.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+CLK => inst4.CLK
+Ce => inst.ENA
+Ce => inst2.ENA
+Ce => inst3.ENA
+Ce => inst4.ENA
+Dout1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Din1 => inst2.DATAIN
+Dout2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Din2 => inst3.DATAIN
+Dout3 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+Din3 => inst4.DATAIN
 
 
-|week3_ex3|twobitcomparator:inst1
-LT <= inst16.DB_MAX_OUTPUT_PORT_TYPE
-A0 => inst2.IN0
-A0 => inst12.IN0
-A0 => inst8.IN0
-A0 => inst9.IN1
-B1 => inst6.IN1
-B1 => inst5.IN1
-B1 => inst11.IN1
-B1 => inst4.IN0
-B0 => inst6.IN2
-B0 => inst7.IN2
-B0 => inst12.IN1
-B0 => inst3.IN0
-A1 => inst.IN0
-A1 => inst11.IN0
-A1 => inst9.IN0
-A1 => inst10.IN0
-EQ <= inst15.DB_MAX_OUTPUT_PORT_TYPE
-GT <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+|week4_ex5|fourbitregister:inst1
+Dout0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+RST => inst.ACLR
+RST => inst2.ACLR
+RST => inst3.ACLR
+RST => inst4.ACLR
+Din0 => inst.DATAIN
+CLK => inst.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+CLK => inst4.CLK
+Ce => inst.ENA
+Ce => inst2.ENA
+Ce => inst3.ENA
+Ce => inst4.ENA
+Dout1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Din1 => inst2.DATAIN
+Dout2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Din2 => inst3.DATAIN
+Dout3 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+Din3 => inst4.DATAIN
 
 

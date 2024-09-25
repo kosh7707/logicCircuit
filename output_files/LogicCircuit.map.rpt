@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LogicCircuit
-Tue Sep 24 19:36:19 2024
+Wed Sep 25 14:02:03 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,14 +43,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Sep 24 19:36:19 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed Sep 25 14:02:03 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; LogicCircuit                                ;
-; Top-level Entity Name           ; week3_ex3                                   ;
+; Top-level Entity Name           ; week4_ex5                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 11                                          ;
+; Total registers                 ; 8                                           ;
+; Total pins                      ; 15                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; week3_ex3          ; LogicCircuit       ;
+; Top-level entity name                                                           ; week4_ex5          ; LogicCircuit       ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -159,57 +159,60 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                               ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                     ; Library ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------+---------+
-; twobitcomparator.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Administrator/Desktop/LogicCircuit/twobitcomparator.bdf ;         ;
-; week3_ex3.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Administrator/Desktop/LogicCircuit/week3_ex3.bdf        ;         ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------+---------+
+; week4_ex5.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Administrator/Desktop/LogicCircuit/week4_ex5.bdf       ;         ;
+; fourbitregister.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Administrator/Desktop/LogicCircuit/fourbitregister.bdf ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimate of Logic utilization (ALMs needed) ; 3        ;
-;                                             ;          ;
-; Combinational ALUT usage for logic          ; 6        ;
-;     -- 7 input functions                    ; 0        ;
-;     -- 6 input functions                    ; 0        ;
-;     -- 5 input functions                    ; 3        ;
-;     -- 4 input functions                    ; 3        ;
-;     -- <=3 input functions                  ; 0        ;
-;                                             ;          ;
-; Dedicated logic registers                   ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 11       ;
-;                                             ;          ;
-; Total DSP Blocks                            ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; A3~input ;
-; Maximum fan-out                             ; 3        ;
-; Total fan-out                               ; 41       ;
-; Average fan-out                             ; 1.46     ;
-+---------------------------------------------+----------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 4         ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 0         ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 0         ;
+;     -- 5 input functions                    ; 0         ;
+;     -- 4 input functions                    ; 0         ;
+;     -- <=3 input functions                  ; 0         ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 8         ;
+;                                             ;           ;
+; I/O pins                                    ; 15        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 8         ;
+; Total fan-out                               ; 55        ;
+; Average fan-out                             ; 1.45      ;
++---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |week3_ex3                 ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 11   ; 0            ; |week3_ex3          ; week3_ex3   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                     ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Entity Name     ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+-----------------+--------------+
+; |week4_ex5                 ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 15   ; 0            ; |week4_ex5                       ; week4_ex5       ; work         ;
+;    |fourbitregister:inst1| ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |week4_ex5|fourbitregister:inst1 ; fourbitregister ; work         ;
+;    |fourbitregister:inst|  ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |week4_ex5|fourbitregister:inst  ; fourbitregister ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -218,31 +221,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 8     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 7                           ;
-;     normal            ; 7                           ;
-;         1 data inputs ; 1                           ;
-;         4 data inputs ; 3                           ;
-;         5 data inputs ; 3                           ;
-; boundary_port         ; 11                          ;
-;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.47                        ;
-+-----------------------+-----------------------------+
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; arriav_ff         ; 8                               ;
+;     ENA CLR       ; 8                               ;
+; boundary_port     ; 15                              ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
 
 
 +-------------------------------+
@@ -260,7 +260,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Sep 24 19:36:13 2024
+    Info: Processing started: Wed Sep 25 14:01:58 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LogicCircuit -c LogicCircuit
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -278,19 +278,33 @@ Info (12021): Found 1 design units, including 1 entities, in source file week3_e
     Info (12023): Found entity 1: week3_ex2
 Info (12021): Found 1 design units, including 1 entities, in source file week3_ex3.bdf
     Info (12023): Found entity 1: week3_ex3
-Info (12127): Elaborating entity "week3_ex3" for the top level hierarchy
-Info (12128): Elaborating entity "twobitcomparator" for hierarchy "twobitcomparator:inst"
+Info (12021): Found 1 design units, including 1 entities, in source file week4_ex1.bdf
+    Info (12023): Found entity 1: week4_ex1
+Info (12021): Found 1 design units, including 1 entities, in source file week4_ex1_2.bdf
+    Info (12023): Found entity 1: week4_ex1_2
+Info (12021): Found 1 design units, including 1 entities, in source file week4_ex2.bdf
+    Info (12023): Found entity 1: week4_ex2
+Info (12021): Found 1 design units, including 1 entities, in source file week4_ex3.bdf
+    Info (12023): Found entity 1: week4_ex3
+Info (12021): Found 1 design units, including 1 entities, in source file week4_ex4.bdf
+    Info (12023): Found entity 1: week4_ex4
+Info (12021): Found 1 design units, including 1 entities, in source file week4_ex5.bdf
+    Info (12023): Found entity 1: week4_ex5
+Info (12021): Found 1 design units, including 1 entities, in source file fourbitregister.bdf
+    Info (12023): Found entity 1: fourbitregister
+Info (12127): Elaborating entity "week4_ex5" for the top level hierarchy
+Info (12128): Elaborating entity "fourbitregister" for hierarchy "fourbitregister:inst"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 6 logic cells
+Info (21057): Implemented 23 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 8 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4834 megabytes
-    Info: Processing ended: Tue Sep 24 19:36:19 2024
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 4874 megabytes
+    Info: Processing ended: Wed Sep 25 14:02:03 2024
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:06
 
 
