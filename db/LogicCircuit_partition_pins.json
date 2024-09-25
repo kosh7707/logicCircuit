@@ -4,7 +4,27 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "A0",
+					"name" : "Cout",
+					"strict" : false
+				},
+				{
+					"name" : "S0",
+					"strict" : false
+				},
+				{
+					"name" : "S1",
+					"strict" : false
+				},
+				{
+					"name" : "S2",
+					"strict" : false
+				},
+				{
+					"name" : "S3",
+					"strict" : false
+				},
+				{
+					"name" : "Cin",
 					"strict" : false
 				},
 				{
@@ -12,7 +32,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "A2",
+					"name" : "A5",
+					"strict" : false
+				},
+				{
+					"name" : "A9",
 					"strict" : false
 				},
 				{
@@ -20,7 +44,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "B0",
+					"name" : "A7",
+					"strict" : false
+				},
+				{
+					"name" : "A11",
 					"strict" : false
 				},
 				{
@@ -28,7 +56,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "B2",
+					"name" : "B5",
+					"strict" : false
+				},
+				{
+					"name" : "B9",
 					"strict" : false
 				},
 				{
@@ -36,31 +68,51 @@
 					"strict" : false
 				},
 				{
-					"name" : "Din0",
+					"name" : "B7",
 					"strict" : false
 				},
 				{
-					"name" : "CLK",
+					"name" : "B11",
 					"strict" : false
 				},
 				{
-					"name" : "RST",
+					"name" : "A2",
 					"strict" : false
 				},
 				{
-					"name" : "Ce",
+					"name" : "A6",
 					"strict" : false
 				},
 				{
-					"name" : "Din1",
+					"name" : "A10",
 					"strict" : false
 				},
 				{
-					"name" : "Din2",
+					"name" : "B2",
 					"strict" : false
 				},
 				{
-					"name" : "Din3",
+					"name" : "B6",
+					"strict" : false
+				},
+				{
+					"name" : "B10",
+					"strict" : false
+				},
+				{
+					"name" : "A4",
+					"strict" : false
+				},
+				{
+					"name" : "B4",
+					"strict" : false
+				},
+				{
+					"name" : "A8",
+					"strict" : false
+				},
+				{
+					"name" : "B8",
 					"strict" : false
 				}
 			]
