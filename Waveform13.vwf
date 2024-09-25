@@ -20,6 +20,10 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +42,10 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
+
+
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
@@ -342,8 +350,8 @@ TRANSITION_LIST("Din0")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 50.0;
 		LEVEL 0 FOR 880.0;
 	}
 }
@@ -353,8 +361,8 @@ TRANSITION_LIST("Din1")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 50.0;
 		LEVEL 0 FOR 880.0;
 	}
 }
@@ -364,8 +372,8 @@ TRANSITION_LIST("Din2")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 200.0;
-		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 190.0;
+		LEVEL 1 FOR 50.0;
 		LEVEL 0 FOR 760.0;
 	}
 }
@@ -375,8 +383,8 @@ TRANSITION_LIST("Din3")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 200.0;
-		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 190.0;
+		LEVEL 1 FOR 50.0;
 		LEVEL 0 FOR 760.0;
 	}
 }

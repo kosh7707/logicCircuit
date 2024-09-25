@@ -1,5 +1,5 @@
 |week4_ex5
-B0 <= fourbitregister:inst.Dout0
+A0 <= fourbitregister:inst.Dout0
 Din0 => fourbitregister:inst.Din0
 Din1 => fourbitregister:inst.Din1
 Din2 => fourbitregister:inst.Din2
@@ -10,13 +10,13 @@ CLK => fourbitregister:inst.CLK
 CLK => fourbitregister:inst1.CLK
 RST => fourbitregister:inst.RST
 RST => fourbitregister:inst1.RST
-B1 <= fourbitregister:inst.Dout1
-B2 <= fourbitregister:inst.Dout2
-B3 <= fourbitregister:inst.Dout3
-A0 <= fourbitregister:inst1.Dout0
-A1 <= fourbitregister:inst1.Dout1
-A2 <= fourbitregister:inst1.Dout2
-A3 <= fourbitregister:inst1.Dout3
+A1 <= fourbitregister:inst.Dout1
+A2 <= fourbitregister:inst.Dout2
+A3 <= fourbitregister:inst.Dout3
+B0 <= fourbitregister:inst1.Dout0
+B1 <= fourbitregister:inst1.Dout1
+B2 <= fourbitregister:inst1.Dout2
+B3 <= fourbitregister:inst1.Dout3
 
 
 |week4_ex5|fourbitregister:inst
