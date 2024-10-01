@@ -1,5 +1,9 @@
 Analysis & Synthesis report for LogicCircuit
+<<<<<<< HEAD
 Tue Oct 01 21:03:24 2024
+=======
+Wed Sep 25 19:03:48 2024
+>>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,6 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis Status     ; Successful - Tue Oct 01 21:03:24 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; LogicCircuit                                ;
@@ -51,6 +56,16 @@ https://fpgasoftware.intel.com/eula.
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 16                                          ;
 ; Total pins                      ; 13                                          ;
+=======
+; Analysis & Synthesis Status     ; Successful - Wed Sep 25 19:03:48 2024       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; LogicCircuit                                ;
+; Top-level Entity Name           ; week3_ex2                                   ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 30                                          ;
+>>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -69,7 +84,11 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+<<<<<<< HEAD
 ; Top-level entity name                                                           ; week5_ex2          ; LogicCircuit       ;
+=======
+; Top-level entity name                                                           ; week3_ex2          ; LogicCircuit       ;
+>>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -166,6 +185,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
+<<<<<<< HEAD
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Source Files Read                                                                                                                                 ;
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
@@ -221,6 +241,66 @@ https://fpgasoftware.intel.com/eula.
 ;    |mux41:inst20|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week5_ex2|mux41:inst20            ; mux41            ; work         ;
 ;    |twobyfourdecoder:inst30| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week5_ex2|twobyfourdecoder:inst30 ; twobyfourdecoder ; work         ;
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+------------------+--------------+
+=======
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+; halfadder.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Administrator/Desktop/LogicCircuit/halfadder.bdf               ;         ;
+; decimaltobinaryencoder.bdf       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Administrator/Desktop/LogicCircuit/decimaltobinaryencoder.bdf  ;         ;
+; fulladder.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Administrator/Desktop/LogicCircuit/fulladder.bdf               ;         ;
+; fourbitripplecarryadder.bdf      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Administrator/Desktop/LogicCircuit/fourbitripplecarryadder.bdf ;         ;
+; week3_ex2.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Administrator/Desktop/LogicCircuit/week3_ex2.bdf               ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                     ;
++---------------------------------------------+-----------------------------------+
+; Resource                                    ; Usage                             ;
++---------------------------------------------+-----------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 9                                 ;
+;                                             ;                                   ;
+; Combinational ALUT usage for logic          ; 14                                ;
+;     -- 7 input functions                    ; 0                                 ;
+;     -- 6 input functions                    ; 4                                 ;
+;     -- 5 input functions                    ; 4                                 ;
+;     -- 4 input functions                    ; 4                                 ;
+;     -- <=3 input functions                  ; 2                                 ;
+;                                             ;                                   ;
+; Dedicated logic registers                   ; 0                                 ;
+;                                             ;                                   ;
+; I/O pins                                    ; 30                                ;
+;                                             ;                                   ;
+; Total DSP Blocks                            ; 0                                 ;
+;                                             ;                                   ;
+; Maximum fan-out node                        ; decimalToBinaryEncoder:inst|inst3 ;
+; Maximum fan-out                             ; 3                                 ;
+; Total fan-out                               ; 101                               ;
+; Average fan-out                             ; 1.36                              ;
++---------------------------------------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                             ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+-------------------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Entity Name             ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+-------------------------+--------------+
+; |week3_ex2                         ; 14 (0)              ; 0 (0)                     ; 0                 ; 0          ; 30   ; 0            ; |week3_ex2                                                               ; week3_ex2               ; work         ;
+;    |decimalToBinaryEncoder:inst1|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week3_ex2|decimalToBinaryEncoder:inst1                                  ; decimalToBinaryEncoder  ; work         ;
+;    |decimalToBinaryEncoder:inst|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week3_ex2|decimalToBinaryEncoder:inst                                   ; decimalToBinaryEncoder  ; work         ;
+;    |fourbitripplecarryadder:inst2| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week3_ex2|fourbitripplecarryadder:inst2                                 ; fourbitripplecarryadder ; work         ;
+;       |fulladder:inst2|            ; 2 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst2                 ; fulladder               ; work         ;
+;          |halfadder:inst1|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst2|halfadder:inst1 ; halfadder               ; work         ;
+;       |fulladder:inst3|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst3                 ; fulladder               ; work         ;
+;          |halfadder:inst1|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst3|halfadder:inst1 ; halfadder               ; work         ;
+;       |fulladder:inst4|            ; 2 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst4                 ; fulladder               ; work         ;
+;          |halfadder:inst1|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst4|halfadder:inst1 ; halfadder               ; work         ;
+;       |fulladder:inst|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst                  ; fulladder               ; work         ;
+;          |halfadder:inst1|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst|halfadder:inst1  ; halfadder               ; work         ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+-------------------------+--------------+
+>>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -229,12 +309,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
+<<<<<<< HEAD
 ; Total registers                              ; 16    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 16    ;
+=======
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+>>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -244,6 +333,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
+<<<<<<< HEAD
 ; arriav_ff             ; 16                          ;
 ;     ENA CLR           ; 16                          ;
 ; arriav_lcell_comb     ; 8                           ;
@@ -255,6 +345,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
 ; Average LUT depth     ; 0.82                        ;
+=======
+; arriav_lcell_comb     ; 14                          ;
+;     normal            ; 14                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 4                           ;
+;         6 data inputs ; 4                           ;
+; boundary_port         ; 30                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.70                        ;
+>>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed
 +-----------------------+-----------------------------+
 
 
@@ -273,10 +375,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Tue Oct 01 21:03:18 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LogicCircuit -c LogicCircuit
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+=======
+    Info: Processing started: Wed Sep 25 19:03:39 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LogicCircuit -c LogicCircuit
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /users/administrator/desktop/block5.bdf
+    Info (12023): Found entity 1: block5
+Info (12021): Found 1 design units, including 1 entities, in source file /users/administrator/desktop/block4.bdf
+    Info (12023): Found entity 1: block4
+Info (12021): Found 1 design units, including 1 entities, in source file /users/administrator/desktop/block3.bdf
+    Info (12023): Found entity 1: block3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/administrator/desktop/block2.bdf
+    Info (12023): Found entity 1: block2
+Info (12021): Found 1 design units, including 1 entities, in source file /users/administrator/desktop/block1.bdf
+    Info (12023): Found entity 1: block1
+>>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed
 Info (12021): Found 1 design units, including 1 entities, in source file halfadder.bdf
     Info (12023): Found entity 1: halfadder
 Info (12021): Found 1 design units, including 1 entities, in source file decimaltobinaryencoder.bdf
@@ -305,6 +424,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file week4_e
     Info (12023): Found entity 1: week4_ex5
 Info (12021): Found 1 design units, including 1 entities, in source file fourbitregister.bdf
     Info (12023): Found entity 1: fourbitregister
+<<<<<<< HEAD
 Info (12021): Found 1 design units, including 1 entities, in source file week5_ex2.bdf
     Info (12023): Found entity 1: week5_ex2
 Info (12021): Found 1 design units, including 1 entities, in source file twobyfourdecoder.bdf
@@ -363,5 +483,27 @@ Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
     Info: Processing ended: Tue Oct 01 21:03:24 2024
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:06
+=======
+Info (12127): Elaborating entity "week3_ex2" for the top level hierarchy
+Info (12128): Elaborating entity "fourbitripplecarryadder" for hierarchy "fourbitripplecarryadder:inst2"
+Info (12128): Elaborating entity "fulladder" for hierarchy "fourbitripplecarryadder:inst2|fulladder:inst"
+Info (12128): Elaborating entity "halfadder" for hierarchy "fourbitripplecarryadder:inst2|fulladder:inst|halfadder:inst1"
+Info (12128): Elaborating entity "decimalToBinaryEncoder" for hierarchy "decimalToBinaryEncoder:inst"
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "A0"
+    Warning (15610): No output dependent on input pin "B0"
+Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 25 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 14 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Wed Sep 25 19:03:48 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:22
+>>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed
 
 

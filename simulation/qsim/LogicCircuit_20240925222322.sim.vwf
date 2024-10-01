@@ -1,3 +1,51 @@
+<<<<<<< HEAD:simulation/qsim/LogicCircuit_20240925222322.sim.vwf
+=======
+/*<simulation_settings>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicCircuit -c LogicCircuit --vector_source="C:/Users/Administrator/Desktop/LogicCircuit/Waveform15.vwf" --testbench_file="C:/Users/Administrator/Desktop/LogicCircuit/simulation/qsim/Waveform15.vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicCircuit -c LogicCircuit --vector_source="C:/Users/Administrator/Desktop/LogicCircuit/Waveform15.vwf" --testbench_file="C:/Users/Administrator/Desktop/LogicCircuit/simulation/qsim/Waveform15.vwf.vt"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Administrator/Desktop/LogicCircuit/simulation/qsim/" LogicCircuit -c LogicCircuit</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Administrator/Desktop/LogicCircuit/simulation/qsim/" LogicCircuit -c LogicCircuit</tnetlist_cmd>
+<modelsim_script>onerror {exit -code 1}
+vlib work
+vlog -work work LogicCircuit.vo
+vlog -work work Waveform15.vwf.vt
+vsim -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.week4_ex5_vlg_vec_tst
+vcd file -direction LogicCircuit.msim.vcd
+vcd add -internal week4_ex5_vlg_vec_tst/*
+vcd add -internal week4_ex5_vlg_vec_tst/i1/*
+proc simTimestamp {} {
+    echo "Simulation time: $::now ps"
+    if { [string equal running [runStatus]] } {
+        after 2500 simTimestamp
+    }
+}
+after 2500 simTimestamp
+run -all
+quit -f
+
+</modelsim_script>
+<modelsim_script_timing>onerror {exit -code 1}
+vlib work
+vlog -work work LogicCircuit.vo
+vlog -work work Waveform15.vwf.vt
+vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.week4_ex5_vlg_vec_tst
+vcd file -direction LogicCircuit.msim.vcd
+vcd add -internal week4_ex5_vlg_vec_tst/*
+vcd add -internal week4_ex5_vlg_vec_tst/i1/*
+proc simTimestamp {} {
+    echo "Simulation time: $::now ps"
+    if { [string equal running [runStatus]] } {
+        after 2500 simTimestamp
+    }
+}
+after 2500 simTimestamp
+run -all
+quit -f
+
+</modelsim_script_timing>
+<hdl_lang>verilog</hdl_lang>
+</simulation_settings>*/
+>>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed:Waveform15.vwf
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in

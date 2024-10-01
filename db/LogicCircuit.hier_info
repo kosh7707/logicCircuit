@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 |week5_ex2
 Dout3 <= MUX41:inst20.Q
 Address[0] => MUX41:inst20.S0
@@ -194,5 +195,217 @@ D0 => 2.IN3
 D1 => 3.IN3
 D2 => 4.IN3
 D3 => 5.IN3
+=======
+|week3_ex2
+Cout <= fourbitripplecarryadder:inst2.Cout
+A0 => decimaltobinaryencoder:inst.D0
+A1 => decimaltobinaryencoder:inst.D1
+A2 => decimaltobinaryencoder:inst.D2
+A3 => decimaltobinaryencoder:inst.D3
+A4 => decimaltobinaryencoder:inst.D4
+A5 => decimaltobinaryencoder:inst.D5
+A6 => decimaltobinaryencoder:inst.D6
+A7 => decimaltobinaryencoder:inst.D7
+A8 => decimaltobinaryencoder:inst.D8
+A9 => decimaltobinaryencoder:inst.D9
+A10 => decimaltobinaryencoder:inst.D10
+A11 => decimaltobinaryencoder:inst.D11
+B0 => decimaltobinaryencoder:inst1.D0
+B1 => decimaltobinaryencoder:inst1.D1
+B2 => decimaltobinaryencoder:inst1.D2
+B3 => decimaltobinaryencoder:inst1.D3
+B4 => decimaltobinaryencoder:inst1.D4
+B5 => decimaltobinaryencoder:inst1.D5
+B6 => decimaltobinaryencoder:inst1.D6
+B7 => decimaltobinaryencoder:inst1.D7
+B8 => decimaltobinaryencoder:inst1.D8
+B9 => decimaltobinaryencoder:inst1.D9
+B10 => decimaltobinaryencoder:inst1.D10
+B11 => decimaltobinaryencoder:inst1.D11
+Cin => fourbitripplecarryadder:inst2.Cin
+S0 <= fourbitripplecarryadder:inst2.S0
+S1 <= fourbitripplecarryadder:inst2.S1
+S2 <= fourbitripplecarryadder:inst2.S2
+S3 <= fourbitripplecarryadder:inst2.S3
+
+
+|week3_ex2|fourbitripplecarryadder:inst2
+S0 <= fulladder:inst.Sum
+A0 => fulladder:inst.A
+B0 => fulladder:inst.B
+Cin => fulladder:inst.Cin
+S1 <= fulladder:inst2.Sum
+A1 => fulladder:inst2.A
+B1 => fulladder:inst2.B
+S2 <= fulladder:inst3.Sum
+A2 => fulladder:inst3.A
+B2 => fulladder:inst3.B
+S3 <= fulladder:inst4.Sum
+A3 => fulladder:inst4.A
+B3 => fulladder:inst4.B
+Cout <= fulladder:inst4.Cout
+
+
+|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst
+Sum <= halfadder:inst1.Sum
+Cin => halfadder:inst1.A
+A => halfadder:inst.A
+B => halfadder:inst.B
+Cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst|halfadder:inst1
+Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
+A => CarryAnd.IN0
+A => SumXor.IN0
+B => CarryAnd.IN1
+B => SumXor.IN1
+Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst|halfadder:inst
+Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
+A => CarryAnd.IN0
+A => SumXor.IN0
+B => CarryAnd.IN1
+B => SumXor.IN1
+Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst2
+Sum <= halfadder:inst1.Sum
+Cin => halfadder:inst1.A
+A => halfadder:inst.A
+B => halfadder:inst.B
+Cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst2|halfadder:inst1
+Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
+A => CarryAnd.IN0
+A => SumXor.IN0
+B => CarryAnd.IN1
+B => SumXor.IN1
+Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst2|halfadder:inst
+Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
+A => CarryAnd.IN0
+A => SumXor.IN0
+B => CarryAnd.IN1
+B => SumXor.IN1
+Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst3
+Sum <= halfadder:inst1.Sum
+Cin => halfadder:inst1.A
+A => halfadder:inst.A
+B => halfadder:inst.B
+Cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst3|halfadder:inst1
+Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
+A => CarryAnd.IN0
+A => SumXor.IN0
+B => CarryAnd.IN1
+B => SumXor.IN1
+Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst3|halfadder:inst
+Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
+A => CarryAnd.IN0
+A => SumXor.IN0
+B => CarryAnd.IN1
+B => SumXor.IN1
+Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst4
+Sum <= halfadder:inst1.Sum
+Cin => halfadder:inst1.A
+A => halfadder:inst.A
+B => halfadder:inst.B
+Cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst4|halfadder:inst1
+Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
+A => CarryAnd.IN0
+A => SumXor.IN0
+B => CarryAnd.IN1
+B => SumXor.IN1
+Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst4|halfadder:inst
+Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
+A => CarryAnd.IN0
+A => SumXor.IN0
+B => CarryAnd.IN1
+B => SumXor.IN1
+Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week3_ex2|decimalToBinaryEncoder:inst
+A0 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst2.IN0
+D1 => inst.IN1
+D0 => inst.IN0
+D5 => inst3.IN1
+D5 => inst5.IN3
+D3 => inst3.IN2
+D3 => inst4.IN2
+D7 => inst3.IN3
+D7 => inst4.IN3
+D7 => inst5.IN2
+D9 => inst3.IN4
+D9 => inst6.IN3
+D11 => inst3.IN5
+D11 => inst4.IN5
+D11 => inst6.IN2
+A1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D2 => inst4.IN0
+D6 => inst4.IN1
+D6 => inst5.IN1
+D10 => inst4.IN4
+D10 => inst6.IN1
+A2 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D4 => inst5.IN0
+A3 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+D8 => inst6.IN0
+
+
+|week3_ex2|decimalToBinaryEncoder:inst1
+A0 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst2.IN0
+D1 => inst.IN1
+D0 => inst.IN0
+D5 => inst3.IN1
+D5 => inst5.IN3
+D3 => inst3.IN2
+D3 => inst4.IN2
+D7 => inst3.IN3
+D7 => inst4.IN3
+D7 => inst5.IN2
+D9 => inst3.IN4
+D9 => inst6.IN3
+D11 => inst3.IN5
+D11 => inst4.IN5
+D11 => inst6.IN2
+A1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D2 => inst4.IN0
+D6 => inst4.IN1
+D6 => inst5.IN1
+D10 => inst4.IN4
+D10 => inst6.IN1
+A2 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D4 => inst5.IN0
+A3 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+D8 => inst6.IN0
+>>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed
 
 
