@@ -1,31 +1,76 @@
-|week4_ex5
-A0 <= fourbitregister:inst.Dout0
-Din0 => fourbitregister:inst.Din0
-Din1 => fourbitregister:inst.Din1
-Din2 => fourbitregister:inst.Din2
-Din3 => fourbitregister:inst.Din3
-Ce => fourbitregister:inst.Ce
-Ce => fourbitregister:inst1.Ce
+|week5_ex2
+Dout3 <= MUX41:inst20.Q
+Address[0] => MUX41:inst20.S0
+Address[0] => twobyfourdecoder:inst30.A0
+Address[0] => MUX41:inst19.S0
+Address[0] => MUX41:inst18.S0
+Address[0] => MUX41:inst17.S0
+Address[1] => twobyfourdecoder:inst30.A1
+Address[1] => MUX41:inst20.S1
+Address[1] => MUX41:inst19.S1
+Address[1] => MUX41:inst18.S1
+Address[1] => MUX41:inst17.S1
+RW => inst21.IN0
+RW => inst31.IN0
+RW => inst23.IN0
+RW => MUX41:inst20.INH
+RW => inst22.IN0
+RW => MUX41:inst19.INH
+RW => MUX41:inst18.INH
+RW => MUX41:inst17.INH
+CLK => fourbitregister:inst6.CLK
+CLK => fourbitregister:inst5.CLK
 CLK => fourbitregister:inst.CLK
-CLK => fourbitregister:inst1.CLK
+CLK => fourbitregister:inst4.CLK
+RST => fourbitregister:inst6.RST
+RST => fourbitregister:inst5.RST
 RST => fourbitregister:inst.RST
-RST => fourbitregister:inst1.RST
-A1 <= fourbitregister:inst.Dout1
-A2 <= fourbitregister:inst.Dout2
-A3 <= fourbitregister:inst.Dout3
-B0 <= fourbitregister:inst1.Dout0
-B1 <= fourbitregister:inst1.Dout1
-B2 <= fourbitregister:inst1.Dout2
-B3 <= fourbitregister:inst1.Dout3
+RST => fourbitregister:inst4.RST
+Din[0] => fourbitregister:inst6.Din[0]
+Din[0] => fourbitregister:inst5.Din[0]
+Din[0] => fourbitregister:inst.Din[0]
+Din[0] => fourbitregister:inst4.Din[0]
+Din[1] => fourbitregister:inst6.Din[1]
+Din[1] => fourbitregister:inst5.Din[1]
+Din[1] => fourbitregister:inst.Din[1]
+Din[1] => fourbitregister:inst4.Din[1]
+Din[2] => fourbitregister:inst6.Din[2]
+Din[2] => fourbitregister:inst5.Din[2]
+Din[2] => fourbitregister:inst.Din[2]
+Din[2] => fourbitregister:inst4.Din[2]
+Din[3] => fourbitregister:inst6.Din[3]
+Din[3] => fourbitregister:inst5.Din[3]
+Din[3] => fourbitregister:inst.Din[3]
+Din[3] => fourbitregister:inst4.Din[3]
+Dout2 <= MUX41:inst19.Q
+Dout1 <= MUX41:inst18.Q
+Dout0 <= MUX41:inst17.Q
 
 
-|week4_ex5|fourbitregister:inst
-Dout0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+|week5_ex2|MUX41:inst20
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|week5_ex2|fourbitregister:inst6
+Dout[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 RST => inst.ACLR
 RST => inst2.ACLR
 RST => inst3.ACLR
 RST => inst4.ACLR
-Din0 => inst.DATAIN
+Din[0] => inst.DATAIN
+Din[1] => inst2.DATAIN
+Din[2] => inst3.DATAIN
+Din[3] => inst4.DATAIN
 CLK => inst.CLK
 CLK => inst2.CLK
 CLK => inst3.CLK
@@ -34,21 +79,34 @@ Ce => inst.ENA
 Ce => inst2.ENA
 Ce => inst3.ENA
 Ce => inst4.ENA
-Dout1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-Din1 => inst2.DATAIN
-Dout2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-Din2 => inst3.DATAIN
-Dout3 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-Din3 => inst4.DATAIN
 
 
-|week4_ex5|fourbitregister:inst1
-Dout0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+|week5_ex2|twobyfourdecoder:inst30
+D0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A0 => inst4.IN0
+A0 => inst1.IN0
+A0 => inst3.IN1
+A1 => inst5.IN0
+A1 => inst2.IN1
+A1 => inst3.IN0
+D1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+D2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+D3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week5_ex2|fourbitregister:inst5
+Dout[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 RST => inst.ACLR
 RST => inst2.ACLR
 RST => inst3.ACLR
 RST => inst4.ACLR
-Din0 => inst.DATAIN
+Din[0] => inst.DATAIN
+Din[1] => inst2.DATAIN
+Din[2] => inst3.DATAIN
+Din[3] => inst4.DATAIN
 CLK => inst.CLK
 CLK => inst2.CLK
 CLK => inst3.CLK
@@ -57,11 +115,84 @@ Ce => inst.ENA
 Ce => inst2.ENA
 Ce => inst3.ENA
 Ce => inst4.ENA
-Dout1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-Din1 => inst2.DATAIN
-Dout2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-Din2 => inst3.DATAIN
-Dout3 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-Din3 => inst4.DATAIN
+
+
+|week5_ex2|fourbitregister:inst
+Dout[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+RST => inst.ACLR
+RST => inst2.ACLR
+RST => inst3.ACLR
+RST => inst4.ACLR
+Din[0] => inst.DATAIN
+Din[1] => inst2.DATAIN
+Din[2] => inst3.DATAIN
+Din[3] => inst4.DATAIN
+CLK => inst.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+CLK => inst4.CLK
+Ce => inst.ENA
+Ce => inst2.ENA
+Ce => inst3.ENA
+Ce => inst4.ENA
+
+
+|week5_ex2|fourbitregister:inst4
+Dout[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+RST => inst.ACLR
+RST => inst2.ACLR
+RST => inst3.ACLR
+RST => inst4.ACLR
+Din[0] => inst.DATAIN
+Din[1] => inst2.DATAIN
+Din[2] => inst3.DATAIN
+Din[3] => inst4.DATAIN
+CLK => inst.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+CLK => inst4.CLK
+Ce => inst.ENA
+Ce => inst2.ENA
+Ce => inst3.ENA
+Ce => inst4.ENA
+
+
+|week5_ex2|MUX41:inst19
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|week5_ex2|MUX41:inst18
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|week5_ex2|MUX41:inst17
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
 
 
