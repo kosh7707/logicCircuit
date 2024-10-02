@@ -16,8 +16,5 @@ after 2500 simTimestamp
 run -all
 quit -f
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed

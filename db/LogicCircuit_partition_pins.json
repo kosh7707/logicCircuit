@@ -4,147 +4,43 @@
 			"name" : "Top",
 			"pins" : [
 				{
-<<<<<<< HEAD
-					"name" : "Dout3",
-=======
-					"name" : "Cout",
+					"name" : "CNT100",
 					"strict" : false
 				},
 				{
-					"name" : "S0",
+					"name" : "CNT101",
 					"strict" : false
 				},
 				{
-					"name" : "S1",
+					"name" : "CNT102",
 					"strict" : false
 				},
 				{
-					"name" : "S2",
+					"name" : "CNT103",
 					"strict" : false
 				},
 				{
-					"name" : "S3",
+					"name" : "CNT1000",
 					"strict" : false
 				},
 				{
-					"name" : "Cin",
->>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed
+					"name" : "CNT1001",
 					"strict" : false
 				},
 				{
-					"name" : "Dout2",
+					"name" : "CNT1002",
 					"strict" : false
 				},
 				{
-<<<<<<< HEAD
-					"name" : "Dout1",
-=======
-					"name" : "A5",
+					"name" : "CNT1003",
 					"strict" : false
 				},
 				{
-					"name" : "A9",
->>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "Dout0",
-					"strict" : false
-				},
-				{
-<<<<<<< HEAD
-					"name" : "Address[0]",
-=======
-					"name" : "A7",
-					"strict" : false
-				},
-				{
-					"name" : "A11",
->>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed
-					"strict" : false
-				},
-				{
-					"name" : "Address[1]",
-					"strict" : false
-				},
-				{
-<<<<<<< HEAD
-					"name" : "RW",
-					"strict" : false
-				},
-				{
-					"name" : "Din[3]",
-=======
-					"name" : "B5",
-					"strict" : false
-				},
-				{
-					"name" : "B9",
-					"strict" : false
-				},
-				{
-					"name" : "B3",
-					"strict" : false
-				},
-				{
-					"name" : "B7",
->>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed
-					"strict" : false
-				},
-				{
-					"name" : "B11",
-					"strict" : false
-				},
-				{
-					"name" : "A2",
-					"strict" : false
-				},
-				{
-<<<<<<< HEAD
-					"name" : "Din[2]",
-					"strict" : false
-				},
-				{
-					"name" : "Din[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Din[0]",
-=======
-					"name" : "A6",
-					"strict" : false
-				},
-				{
-					"name" : "A10",
-					"strict" : false
-				},
-				{
-					"name" : "B2",
-					"strict" : false
-				},
-				{
-					"name" : "B6",
-					"strict" : false
-				},
-				{
-					"name" : "B10",
-					"strict" : false
-				},
-				{
-					"name" : "A4",
-					"strict" : false
-				},
-				{
-					"name" : "B4",
-					"strict" : false
-				},
-				{
-					"name" : "A8",
-					"strict" : false
-				},
-				{
-					"name" : "B8",
->>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed
+					"name" : "rst_n",
 					"strict" : false
 				}
 			]

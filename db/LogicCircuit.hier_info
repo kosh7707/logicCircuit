@@ -1,411 +1,47 @@
-<<<<<<< HEAD
-|week5_ex2
-Dout3 <= MUX41:inst20.Q
-Address[0] => MUX41:inst20.S0
-Address[0] => twobyfourdecoder:inst30.A0
-Address[0] => MUX41:inst19.S0
-Address[0] => MUX41:inst18.S0
-Address[0] => MUX41:inst17.S0
-Address[1] => twobyfourdecoder:inst30.A1
-Address[1] => MUX41:inst20.S1
-Address[1] => MUX41:inst19.S1
-Address[1] => MUX41:inst18.S1
-Address[1] => MUX41:inst17.S1
-RW => inst21.IN0
-RW => inst31.IN0
-RW => inst23.IN0
-RW => MUX41:inst20.INH
-RW => inst22.IN0
-RW => MUX41:inst19.INH
-RW => MUX41:inst18.INH
-RW => MUX41:inst17.INH
-CLK => fourbitregister:inst6.CLK
-CLK => fourbitregister:inst5.CLK
-CLK => fourbitregister:inst.CLK
-CLK => fourbitregister:inst4.CLK
-RST => fourbitregister:inst6.RST
-RST => fourbitregister:inst5.RST
-RST => fourbitregister:inst.RST
-RST => fourbitregister:inst4.RST
-Din[0] => fourbitregister:inst6.Din[0]
-Din[0] => fourbitregister:inst5.Din[0]
-Din[0] => fourbitregister:inst.Din[0]
-Din[0] => fourbitregister:inst4.Din[0]
-Din[1] => fourbitregister:inst6.Din[1]
-Din[1] => fourbitregister:inst5.Din[1]
-Din[1] => fourbitregister:inst.Din[1]
-Din[1] => fourbitregister:inst4.Din[1]
-Din[2] => fourbitregister:inst6.Din[2]
-Din[2] => fourbitregister:inst5.Din[2]
-Din[2] => fourbitregister:inst.Din[2]
-Din[2] => fourbitregister:inst4.Din[2]
-Din[3] => fourbitregister:inst6.Din[3]
-Din[3] => fourbitregister:inst5.Din[3]
-Din[3] => fourbitregister:inst.Din[3]
-Din[3] => fourbitregister:inst4.Din[3]
-Dout2 <= MUX41:inst19.Q
-Dout1 <= MUX41:inst18.Q
-Dout0 <= MUX41:inst17.Q
+|jihwan_week5_ex2
+CNT100 <= counter10:inst.CNT10[3]
+clk => counter10:inst.clk
+clk => inst20.IN0
+clk => inst3.IN0
+rst_n => counter10:inst.rst_n
+rst_n => inst2.ACLR
+rst_n => counter10:inst4.rst_n
+CNT101 <= counter10:inst.CNT10[2]
+CNT102 <= counter10:inst.CNT10[1]
+CNT103 <= counter10:inst.CNT10[0]
+CNT1000 <= counter10:inst4.CNT10[3]
+CNT1001 <= counter10:inst4.CNT10[2]
+CNT1002 <= counter10:inst4.CNT10[1]
+CNT1003 <= counter10:inst4.CNT10[0]
 
 
-|week5_ex2|MUX41:inst20
-Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
-INH => 7.IN0
-S1 => 8.IN0
-S0 => 10.IN0
-D0 => 2.IN3
-D1 => 3.IN3
-D2 => 4.IN3
-D3 => 5.IN3
+|jihwan_week5_ex2|counter10:inst
+CNT10[0] <= D_b.DB_MAX_OUTPUT_PORT_TYPE
+CNT10[1] <= C_b.DB_MAX_OUTPUT_PORT_TYPE
+CNT10[2] <= B_b.DB_MAX_OUTPUT_PORT_TYPE
+CNT10[3] <= A_b.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => A_b.ACLR
+rst_n => B_b.ACLR
+rst_n => C_b.ACLR
+rst_n => D_b.ACLR
+clk => A_b.CLK
+clk => B_b.CLK
+clk => C_b.CLK
+clk => D_b.CLK
 
 
-|week5_ex2|fourbitregister:inst6
-Dout[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
-Dout[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-Dout[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-Dout[3] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-RST => inst.ACLR
-RST => inst2.ACLR
-RST => inst3.ACLR
-RST => inst4.ACLR
-Din[0] => inst.DATAIN
-Din[1] => inst2.DATAIN
-Din[2] => inst3.DATAIN
-Din[3] => inst4.DATAIN
-CLK => inst.CLK
-CLK => inst2.CLK
-CLK => inst3.CLK
-CLK => inst4.CLK
-Ce => inst.ENA
-Ce => inst2.ENA
-Ce => inst3.ENA
-Ce => inst4.ENA
-
-
-|week5_ex2|twobyfourdecoder:inst30
-D0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
-A0 => inst4.IN0
-A0 => inst1.IN0
-A0 => inst3.IN1
-A1 => inst5.IN0
-A1 => inst2.IN1
-A1 => inst3.IN0
-D1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
-D2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-D3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|week5_ex2|fourbitregister:inst5
-Dout[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
-Dout[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-Dout[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-Dout[3] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-RST => inst.ACLR
-RST => inst2.ACLR
-RST => inst3.ACLR
-RST => inst4.ACLR
-Din[0] => inst.DATAIN
-Din[1] => inst2.DATAIN
-Din[2] => inst3.DATAIN
-Din[3] => inst4.DATAIN
-CLK => inst.CLK
-CLK => inst2.CLK
-CLK => inst3.CLK
-CLK => inst4.CLK
-Ce => inst.ENA
-Ce => inst2.ENA
-Ce => inst3.ENA
-Ce => inst4.ENA
-
-
-|week5_ex2|fourbitregister:inst
-Dout[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
-Dout[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-Dout[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-Dout[3] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-RST => inst.ACLR
-RST => inst2.ACLR
-RST => inst3.ACLR
-RST => inst4.ACLR
-Din[0] => inst.DATAIN
-Din[1] => inst2.DATAIN
-Din[2] => inst3.DATAIN
-Din[3] => inst4.DATAIN
-CLK => inst.CLK
-CLK => inst2.CLK
-CLK => inst3.CLK
-CLK => inst4.CLK
-Ce => inst.ENA
-Ce => inst2.ENA
-Ce => inst3.ENA
-Ce => inst4.ENA
-
-
-|week5_ex2|fourbitregister:inst4
-Dout[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
-Dout[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-Dout[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-Dout[3] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-RST => inst.ACLR
-RST => inst2.ACLR
-RST => inst3.ACLR
-RST => inst4.ACLR
-Din[0] => inst.DATAIN
-Din[1] => inst2.DATAIN
-Din[2] => inst3.DATAIN
-Din[3] => inst4.DATAIN
-CLK => inst.CLK
-CLK => inst2.CLK
-CLK => inst3.CLK
-CLK => inst4.CLK
-Ce => inst.ENA
-Ce => inst2.ENA
-Ce => inst3.ENA
-Ce => inst4.ENA
-
-
-|week5_ex2|MUX41:inst19
-Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
-INH => 7.IN0
-S1 => 8.IN0
-S0 => 10.IN0
-D0 => 2.IN3
-D1 => 3.IN3
-D2 => 4.IN3
-D3 => 5.IN3
-
-
-|week5_ex2|MUX41:inst18
-Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
-INH => 7.IN0
-S1 => 8.IN0
-S0 => 10.IN0
-D0 => 2.IN3
-D1 => 3.IN3
-D2 => 4.IN3
-D3 => 5.IN3
-
-
-|week5_ex2|MUX41:inst17
-Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
-INH => 7.IN0
-S1 => 8.IN0
-S0 => 10.IN0
-D0 => 2.IN3
-D1 => 3.IN3
-D2 => 4.IN3
-D3 => 5.IN3
-=======
-|week3_ex2
-Cout <= fourbitripplecarryadder:inst2.Cout
-A0 => decimaltobinaryencoder:inst.D0
-A1 => decimaltobinaryencoder:inst.D1
-A2 => decimaltobinaryencoder:inst.D2
-A3 => decimaltobinaryencoder:inst.D3
-A4 => decimaltobinaryencoder:inst.D4
-A5 => decimaltobinaryencoder:inst.D5
-A6 => decimaltobinaryencoder:inst.D6
-A7 => decimaltobinaryencoder:inst.D7
-A8 => decimaltobinaryencoder:inst.D8
-A9 => decimaltobinaryencoder:inst.D9
-A10 => decimaltobinaryencoder:inst.D10
-A11 => decimaltobinaryencoder:inst.D11
-B0 => decimaltobinaryencoder:inst1.D0
-B1 => decimaltobinaryencoder:inst1.D1
-B2 => decimaltobinaryencoder:inst1.D2
-B3 => decimaltobinaryencoder:inst1.D3
-B4 => decimaltobinaryencoder:inst1.D4
-B5 => decimaltobinaryencoder:inst1.D5
-B6 => decimaltobinaryencoder:inst1.D6
-B7 => decimaltobinaryencoder:inst1.D7
-B8 => decimaltobinaryencoder:inst1.D8
-B9 => decimaltobinaryencoder:inst1.D9
-B10 => decimaltobinaryencoder:inst1.D10
-B11 => decimaltobinaryencoder:inst1.D11
-Cin => fourbitripplecarryadder:inst2.Cin
-S0 <= fourbitripplecarryadder:inst2.S0
-S1 <= fourbitripplecarryadder:inst2.S1
-S2 <= fourbitripplecarryadder:inst2.S2
-S3 <= fourbitripplecarryadder:inst2.S3
-
-
-|week3_ex2|fourbitripplecarryadder:inst2
-S0 <= fulladder:inst.Sum
-A0 => fulladder:inst.A
-B0 => fulladder:inst.B
-Cin => fulladder:inst.Cin
-S1 <= fulladder:inst2.Sum
-A1 => fulladder:inst2.A
-B1 => fulladder:inst2.B
-S2 <= fulladder:inst3.Sum
-A2 => fulladder:inst3.A
-B2 => fulladder:inst3.B
-S3 <= fulladder:inst4.Sum
-A3 => fulladder:inst4.A
-B3 => fulladder:inst4.B
-Cout <= fulladder:inst4.Cout
-
-
-|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst
-Sum <= halfadder:inst1.Sum
-Cin => halfadder:inst1.A
-A => halfadder:inst.A
-B => halfadder:inst.B
-Cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst|halfadder:inst1
-Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
-A => CarryAnd.IN0
-A => SumXor.IN0
-B => CarryAnd.IN1
-B => SumXor.IN1
-Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst|halfadder:inst
-Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
-A => CarryAnd.IN0
-A => SumXor.IN0
-B => CarryAnd.IN1
-B => SumXor.IN1
-Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst2
-Sum <= halfadder:inst1.Sum
-Cin => halfadder:inst1.A
-A => halfadder:inst.A
-B => halfadder:inst.B
-Cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst2|halfadder:inst1
-Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
-A => CarryAnd.IN0
-A => SumXor.IN0
-B => CarryAnd.IN1
-B => SumXor.IN1
-Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst2|halfadder:inst
-Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
-A => CarryAnd.IN0
-A => SumXor.IN0
-B => CarryAnd.IN1
-B => SumXor.IN1
-Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst3
-Sum <= halfadder:inst1.Sum
-Cin => halfadder:inst1.A
-A => halfadder:inst.A
-B => halfadder:inst.B
-Cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst3|halfadder:inst1
-Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
-A => CarryAnd.IN0
-A => SumXor.IN0
-B => CarryAnd.IN1
-B => SumXor.IN1
-Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst3|halfadder:inst
-Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
-A => CarryAnd.IN0
-A => SumXor.IN0
-B => CarryAnd.IN1
-B => SumXor.IN1
-Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst4
-Sum <= halfadder:inst1.Sum
-Cin => halfadder:inst1.A
-A => halfadder:inst.A
-B => halfadder:inst.B
-Cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst4|halfadder:inst1
-Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
-A => CarryAnd.IN0
-A => SumXor.IN0
-B => CarryAnd.IN1
-B => SumXor.IN1
-Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|week3_ex2|fourbitripplecarryadder:inst2|fulladder:inst4|halfadder:inst
-Carry <= CarryAnd.DB_MAX_OUTPUT_PORT_TYPE
-A => CarryAnd.IN0
-A => SumXor.IN0
-B => CarryAnd.IN1
-B => SumXor.IN1
-Sum <= SumXor.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|week3_ex2|decimalToBinaryEncoder:inst
-A0 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-D1 => inst2.IN0
-D1 => inst.IN1
-D0 => inst.IN0
-D5 => inst3.IN1
-D5 => inst5.IN3
-D3 => inst3.IN2
-D3 => inst4.IN2
-D7 => inst3.IN3
-D7 => inst4.IN3
-D7 => inst5.IN2
-D9 => inst3.IN4
-D9 => inst6.IN3
-D11 => inst3.IN5
-D11 => inst4.IN5
-D11 => inst6.IN2
-A1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-D2 => inst4.IN0
-D6 => inst4.IN1
-D6 => inst5.IN1
-D10 => inst4.IN4
-D10 => inst6.IN1
-A2 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-D4 => inst5.IN0
-A3 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
-D8 => inst6.IN0
-
-
-|week3_ex2|decimalToBinaryEncoder:inst1
-A0 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-D1 => inst2.IN0
-D1 => inst.IN1
-D0 => inst.IN0
-D5 => inst3.IN1
-D5 => inst5.IN3
-D3 => inst3.IN2
-D3 => inst4.IN2
-D7 => inst3.IN3
-D7 => inst4.IN3
-D7 => inst5.IN2
-D9 => inst3.IN4
-D9 => inst6.IN3
-D11 => inst3.IN5
-D11 => inst4.IN5
-D11 => inst6.IN2
-A1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-D2 => inst4.IN0
-D6 => inst4.IN1
-D6 => inst5.IN1
-D10 => inst4.IN4
-D10 => inst6.IN1
-A2 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-D4 => inst5.IN0
-A3 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
-D8 => inst6.IN0
->>>>>>> 3937180c3582f4091aad1f01dc3d2b227aba80ed
+|jihwan_week5_ex2|counter10:inst4
+CNT10[0] <= D_b.DB_MAX_OUTPUT_PORT_TYPE
+CNT10[1] <= C_b.DB_MAX_OUTPUT_PORT_TYPE
+CNT10[2] <= B_b.DB_MAX_OUTPUT_PORT_TYPE
+CNT10[3] <= A_b.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => A_b.ACLR
+rst_n => B_b.ACLR
+rst_n => C_b.ACLR
+rst_n => D_b.ACLR
+clk => A_b.CLK
+clk => B_b.CLK
+clk => C_b.CLK
+clk => D_b.CLK
 
 

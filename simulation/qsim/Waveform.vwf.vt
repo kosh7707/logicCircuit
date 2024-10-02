@@ -19,122 +19,46 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/01/2024 21:03:57"
+// Generated on "10/02/2024 19:04:51"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          week5_ex2
+// Verilog Test Bench (with test vectors) for design :                          jihwan_week5_ex2
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module week5_ex2_vlg_vec_tst();
+module jihwan_week5_ex2_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg [1:0] Address;
-reg CLK;
-reg [3:0] Din;
-reg RST;
-reg RW;
+reg clk;
+reg rst_n;
 // wires                                               
-wire Dout0;
-wire Dout1;
-wire Dout2;
-wire Dout3;
+wire CNT100;
+wire CNT101;
+wire CNT102;
+wire CNT103;
+wire CNT1000;
+wire CNT1001;
+wire CNT1002;
+wire CNT1003;
 
 // assign statements (if any)                          
-week5_ex2 i1 (
+jihwan_week5_ex2 i1 (
 // port map - connection between master ports and signals/registers   
-	.Address(Address),
-	.CLK(CLK),
-	.Din(Din),
-	.Dout0(Dout0),
-	.Dout1(Dout1),
-	.Dout2(Dout2),
-	.Dout3(Dout3),
-	.RST(RST),
-	.RW(RW)
+	.clk(clk),
+	.CNT100(CNT100),
+	.CNT101(CNT101),
+	.CNT102(CNT102),
+	.CNT103(CNT103),
+	.CNT1000(CNT1000),
+	.CNT1001(CNT1001),
+	.CNT1002(CNT1002),
+	.CNT1003(CNT1003),
+	.rst_n(rst_n)
 );
 initial 
 begin 
 #1000000 $finish;
-end 
-
-// RST
-initial
-begin
-	RST = 1'b1;
-end 
-
-// CLK
-always
-begin
-	CLK = 1'b0;
-	CLK = #20000 1'b1;
-	#20000;
-end 
-
-// RW
-initial
-begin
-	RW = 1'b0;
-	RW = #120000 1'b1;
-	RW = #40000 1'b0;
-	RW = #280000 1'b1;
-	RW = #40000 1'b0;
-end 
-// Address[ 1 ]
-initial
-begin
-	Address[1] = 1'b0;
-	Address[1] = #120000 1'b1;
-	Address[1] = #40000 1'b0;
-	Address[1] = #160000 1'b1;
-	Address[1] = #40000 1'b0;
-	Address[1] = #220000 1'b1;
-	Address[1] = #100000 1'b0;
-end 
-// Address[ 0 ]
-initial
-begin
-	Address[0] = 1'b0;
-	Address[0] = #120000 1'b1;
-	Address[0] = #40000 1'b0;
-	Address[0] = #160000 1'b1;
-	Address[0] = #40000 1'b0;
-	Address[0] = #80000 1'b1;
-	Address[0] = #40000 1'b0;
-	Address[0] = #100000 1'b1;
-	Address[0] = #100000 1'b0;
-	Address[0] = #100000 1'b1;
-	Address[0] = #160000 1'b0;
-end 
-// Din[ 3 ]
-initial
-begin
-	Din[3] = 1'b0;
-	Din[3] = #120000 1'b1;
-	Din[3] = #40000 1'b0;
-end 
-// Din[ 2 ]
-initial
-begin
-	Din[2] = 1'b0;
-	Din[2] = #440000 1'b1;
-	Din[2] = #40000 1'b0;
-end 
-// Din[ 1 ]
-initial
-begin
-	Din[1] = 1'b0;
-	Din[1] = #440000 1'b1;
-	Din[1] = #40000 1'b0;
-end 
-// Din[ 0 ]
-initial
-begin
-	Din[0] = 1'b0;
-	Din[0] = #120000 1'b1;
-	Din[0] = #40000 1'b0;
 end 
 endmodule
 
