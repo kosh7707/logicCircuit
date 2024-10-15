@@ -19,66 +19,62 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "09/24/2024 17:42:27"
+// Generated on "10/15/2024 16:04:32"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          fulladder
+// Verilog Test Bench (with test vectors) for design :                          week6_ex1_bdf
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module fulladder_vlg_vec_tst();
+module week6_ex1_bdf_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg A;
-reg B;
-reg Cin;
+reg clock;
+reg Din;
+reg reset;
 // wires                                               
-wire Cout;
-wire Sum;
+wire Dout;
 
 // assign statements (if any)                          
-fulladder i1 (
+week6_ex1_bdf i1 (
 // port map - connection between master ports and signals/registers   
-	.A(A),
-	.B(B),
-	.Cin(Cin),
-	.Cout(Cout),
-	.Sum(Sum)
+	.clock(clock),
+	.Din(Din),
+	.Dout(Dout),
+	.reset(reset)
 );
 initial 
 begin 
 #1000000 $finish;
 end 
 
-// A
+// Din
 initial
 begin
-	A = 1'b1;
-	A = #20000 1'b0;
-	A = #10000 1'b1;
-	A = #20000 1'b0;
-	A = #10000 1'b1;
-	A = #20000 1'b0;
+	Din = 1'b0;
+	Din = #20000 1'b1;
+	Din = #40000 1'b0;
+	Din = #40000 1'b1;
+	Din = #40000 1'b0;
+	Din = #160000 1'b1;
+	Din = #80000 1'b0;
 end 
 
-// B
-initial
+// clock
+always
 begin
-	B = 1'b1;
-	B = #20000 1'b0;
-	B = #40000 1'b1;
-	B = #20000 1'b0;
+	clock = 1'b0;
+	clock = #20000 1'b1;
+	#20000;
 end 
 
-// Cin
+// reset
 initial
 begin
-	Cin = 1'b0;
-	Cin = #30000 1'b1;
-	Cin = #20000 1'b0;
-	Cin = #10000 1'b1;
-	Cin = #20000 1'b0;
+	reset = 1'b0;
+	reset = #20000 1'b1;
+	reset = #20000 1'b0;
 end 
 endmodule
 

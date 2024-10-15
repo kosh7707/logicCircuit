@@ -1,13 +1,13 @@
-Fitter Status : Successful - Wed Oct 02 19:01:20 2024
+Fitter Status : Successful - Tue Oct 15 17:24:30 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : LogicCircuit
-Top-level Entity Name : jihwan_week5_ex2
+Top-level Entity Name : week6_ex2_bdf
 Family : Cyclone V
 Device : 5CGXFC7C7F23C8
 Timing Models : Final
-Logic utilization (in ALMs) : 6 / 56,480 ( < 1 % )
-Total registers : 16
-Total pins : 10 / 268 ( 4 % )
+Logic utilization (in ALMs) : 18 / 56,480 ( < 1 % )
+Total registers : 23
+Total pins : 18 / 268 ( 7 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 7,024,640 ( 0 % )
 Total RAM Blocks : 0 / 686 ( 0 % )

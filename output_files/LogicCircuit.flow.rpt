@@ -1,5 +1,5 @@
 Flow report for LogicCircuit
-Wed Oct 02 19:04:52 2024
+Tue Oct 15 17:25:09 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Oct 02 19:04:52 2024       ;
+; Flow Status                     ; Successful - Tue Oct 15 17:25:09 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; LogicCircuit                                ;
-; Top-level Entity Name           ; jihwan_week5_ex2                            ;
+; Top-level Entity Name           ; week6_ex2_bdf                               ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 6 / 56,480 ( < 1 % )                        ;
-; Total registers                 ; 16                                          ;
-; Total pins                      ; 10 / 268 ( 4 % )                            ;
+; Logic utilization (in ALMs)     ; 18 / 56,480 ( < 1 % )                       ;
+; Total registers                 ; 23                                          ;
+; Total pins                      ; 18 / 268 ( 7 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 7,024,640 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 156 ( 0 % )                             ;
@@ -68,28 +68,28 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/02/2024 19:00:48 ;
+; Start date & time ; 10/15/2024 17:24:07 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LogicCircuit        ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                             ;
-+-------------------------------------+----------------------------------------+---------------+------------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name      ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 127913739137343.172786324809536        ; --            ; --               ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --               ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --               ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; jihwan_week5_ex2 ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; jihwan_week5_ex2 ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; jihwan_week5_ex2 ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --               ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --               ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --               ; --         ;
-; TOP_LEVEL_ENTITY                    ; jihwan_week5_ex2                       ; LogicCircuit  ; --               ; --         ;
-+-------------------------------------+----------------------------------------+---------------+------------------+------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                          ;
++-------------------------------------+----------------------------------------+---------------+---------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name   ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+---------------+------------+
+; COMPILER_SIGNATURE_ID               ; 127913735830313.172898064709052        ; --            ; --            ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --            ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --            ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; week6_ex2_bdf ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; week6_ex2_bdf ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; week6_ex2_bdf ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --            ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --            ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --            ; --         ;
+; TOP_LEVEL_ENTITY                    ; week6_ex2_bdf                          ; LogicCircuit  ; --            ; --         ;
++-------------------------------------+----------------------------------------+---------------+---------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -97,13 +97,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4872 MB             ; 00:00:14                           ;
-; Fitter               ; 00:00:26     ; 1.0                     ; 8016 MB             ; 00:02:30                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4714 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4723 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4714 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4723 MB             ; 00:00:01                           ;
-; Total                ; 00:00:31     ; --                      ; --                  ; 00:02:48                           ;
+; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 4869 MB             ; 00:00:04                           ;
+; Fitter               ; 00:00:19     ; 1.0                     ; 7990 MB             ; 00:00:27                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4718 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4727 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4718 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4727 MB             ; 00:00:00                           ;
+; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:31                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,12 +112,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-3L2B3GP  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-3L2B3GP  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-3L2B3GP  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-3L2B3GP  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-3L2B3GP  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-3L2B3GP  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-2B48VLE  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-2B48VLE  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-2B48VLE  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-2B48VLE  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-2B48VLE  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-2B48VLE  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -127,9 +127,9 @@ https://fpgasoftware.intel.com/eula.
 quartus_map --read_settings_files=on --write_settings_files=off LogicCircuit -c LogicCircuit
 quartus_fit --read_settings_files=off --write_settings_files=off LogicCircuit -c LogicCircuit
 quartus_eda --read_settings_files=off --write_settings_files=off LogicCircuit -c LogicCircuit
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicCircuit -c LogicCircuit --vector_source=C:/LogicCircuit/Waveform2.vwf --testbench_file=C:/LogicCircuit/simulation/qsim/Waveform2.vwf.vt
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicCircuit -c LogicCircuit --vector_source=C:/LogicCircuit/Waveform4.vwf --testbench_file=C:/LogicCircuit/simulation/qsim/Waveform4.vwf.vt
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/LogicCircuit/simulation/qsim/ LogicCircuit -c LogicCircuit
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicCircuit -c LogicCircuit --vector_source=C:/LogicCircuit/Waveform.vwf --testbench_file=C:/LogicCircuit/simulation/qsim/Waveform.vwf.vt
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicCircuit -c LogicCircuit --vector_source=C:/LogicCircuit/Waveform4.vwf --testbench_file=C:/LogicCircuit/simulation/qsim/Waveform4.vwf.vt
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/LogicCircuit/simulation/qsim/ LogicCircuit -c LogicCircuit
 
 

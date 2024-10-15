@@ -4,35 +4,63 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "CNT100",
+					"name" : "Dout[3]",
 					"strict" : false
 				},
 				{
-					"name" : "CNT101",
+					"name" : "Dout[2]",
 					"strict" : false
 				},
 				{
-					"name" : "CNT102",
+					"name" : "Dout[1]",
 					"strict" : false
 				},
 				{
-					"name" : "CNT103",
+					"name" : "Dout[0]",
 					"strict" : false
 				},
 				{
-					"name" : "CNT1000",
+					"name" : "reset",
 					"strict" : false
 				},
 				{
-					"name" : "CNT1001",
+					"name" : "keypad[9]",
 					"strict" : false
 				},
 				{
-					"name" : "CNT1002",
+					"name" : "keypad[3]",
 					"strict" : false
 				},
 				{
-					"name" : "CNT1003",
+					"name" : "keypad[1]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[7]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[5]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[8]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[2]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[0]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[6]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[4]",
 					"strict" : false
 				},
 				{
@@ -40,7 +68,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "rst_n",
+					"name" : "keypad[10]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[11]",
 					"strict" : false
 				}
 			]
