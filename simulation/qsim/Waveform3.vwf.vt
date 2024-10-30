@@ -19,54 +19,34 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/15/2024 16:04:32"
+// Generated on "10/16/2024 20:36:04"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          week6_ex1_bdf
+// Verilog Test Bench (with test vectors) for design :                          week6_ex2_bdf
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module week6_ex1_bdf_vlg_vec_tst();
+module week6_ex2_bdf_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg clock;
-reg Din;
+reg clk;
+reg [11:0] keypad;
 reg reset;
 // wires                                               
-wire Dout;
+wire [3:0] Dout;
 
 // assign statements (if any)                          
-week6_ex1_bdf i1 (
+week6_ex2_bdf i1 (
 // port map - connection between master ports and signals/registers   
-	.clock(clock),
-	.Din(Din),
+	.clk(clk),
 	.Dout(Dout),
+	.keypad(keypad),
 	.reset(reset)
 );
 initial 
 begin 
 #1000000 $finish;
-end 
-
-// Din
-initial
-begin
-	Din = 1'b0;
-	Din = #20000 1'b1;
-	Din = #40000 1'b0;
-	Din = #40000 1'b1;
-	Din = #40000 1'b0;
-	Din = #160000 1'b1;
-	Din = #80000 1'b0;
-end 
-
-// clock
-always
-begin
-	clock = 1'b0;
-	clock = #20000 1'b1;
-	#20000;
 end 
 
 // reset
