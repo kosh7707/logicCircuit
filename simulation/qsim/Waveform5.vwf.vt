@@ -19,230 +19,166 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "09/24/2024 19:08:16"
+// Generated on "10/30/2024 16:14:57"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          week3_ex2
+// Verilog Test Bench (with test vectors) for design :                          nine_week_2
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module week3_ex2_vlg_vec_tst();
+module nine_week_2_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg A0;
-reg A1;
-reg A2;
-reg A3;
-reg A4;
-reg A5;
-reg A6;
-reg A7;
-reg A8;
-reg A9;
-reg A10;
-reg A11;
-reg B0;
-reg B1;
-reg B2;
-reg B3;
-reg B4;
-reg B5;
-reg B6;
-reg B7;
-reg B8;
-reg B9;
-reg B10;
-reg B11;
+reg clk;
+reg Din0;
+reg Din1;
+reg Din2;
+reg Din3;
+reg Din4;
+reg Din5;
+reg Din6;
+reg Din7;
+reg Din8;
+reg Din9;
+reg rst;
 // wires                                               
-wire Cout;
-wire S0;
-wire S1;
-wire S2;
-wire S3;
+wire a;
+wire b;
+wire c;
+wire com1;
+wire com2;
+wire com3;
+wire com4;
+wire com5;
+wire com6;
+wire com7;
+wire com8;
+wire d;
+wire e;
+wire f;
+wire g;
+wire [3:0] m_out;
+wire [3:0] out;
 
 // assign statements (if any)                          
-week3_ex2 i1 (
+nine_week_2 i1 (
 // port map - connection between master ports and signals/registers   
-	.A0(A0),
-	.A1(A1),
-	.A2(A2),
-	.A3(A3),
-	.A4(A4),
-	.A5(A5),
-	.A6(A6),
-	.A7(A7),
-	.A8(A8),
-	.A9(A9),
-	.A10(A10),
-	.A11(A11),
-	.B0(B0),
-	.B1(B1),
-	.B2(B2),
-	.B3(B3),
-	.B4(B4),
-	.B5(B5),
-	.B6(B6),
-	.B7(B7),
-	.B8(B8),
-	.B9(B9),
-	.B10(B10),
-	.B11(B11),
-	.Cout(Cout),
-	.S0(S0),
-	.S1(S1),
-	.S2(S2),
-	.S3(S3)
+	.a(a),
+	.b(b),
+	.c(c),
+	.clk(clk),
+	.com1(com1),
+	.com2(com2),
+	.com3(com3),
+	.com4(com4),
+	.com5(com5),
+	.com6(com6),
+	.com7(com7),
+	.com8(com8),
+	.d(d),
+	.Din0(Din0),
+	.Din1(Din1),
+	.Din2(Din2),
+	.Din3(Din3),
+	.Din4(Din4),
+	.Din5(Din5),
+	.Din6(Din6),
+	.Din7(Din7),
+	.Din8(Din8),
+	.Din9(Din9),
+	.e(e),
+	.f(f),
+	.g(g),
+	.m_out(m_out),
+	.out(out),
+	.rst(rst)
 );
 initial 
 begin 
 #1000000 $finish;
 end 
 
-// A0
+// rst
 initial
 begin
-	A0 = 1'b0;
+	rst = 1'b0;
 end 
 
-// A1
-initial
+// clk
+always
 begin
-	A1 = 1'b0;
+	clk = 1'b0;
+	clk = #20000 1'b1;
+	#20000;
 end 
 
-// A2
+// Din0
 initial
 begin
-	A2 = 1'b1;
-	A2 = #20000 1'b0;
+	Din0 = 1'b0;
+	Din0 = #290000 1'b1;
+	Din0 = #20000 1'b0;
 end 
 
-// A3
+// Din1
 initial
 begin
-	A3 = 1'b0;
+	Din1 = 1'b0;
 end 
 
-// A4
+// Din2
 initial
 begin
-	A4 = 1'b0;
+	Din2 = 1'b0;
 end 
 
-// A5
+// Din3
 initial
 begin
-	A5 = 1'b0;
+	Din3 = 1'b0;
+	Din3 = #210000 1'b1;
+	Din3 = #60000 1'b0;
 end 
 
-// A6
+// Din4
 initial
 begin
-	A6 = 1'b0;
+	Din4 = 1'b0;
 end 
 
-// A7
+// Din5
 initial
 begin
-	A7 = 1'b0;
+	Din5 = 1'b0;
 end 
 
-// A8
+// Din6
 initial
 begin
-	A8 = 1'b0;
+	Din6 = 1'b0;
+	Din6 = #90000 1'b1;
+	Din6 = #60000 1'b0;
 end 
 
-// A9
+// Din7
 initial
 begin
-	A9 = 1'b0;
+	Din7 = 1'b0;
 end 
 
-// A10
+// Din8
 initial
 begin
-	A10 = 1'b0;
+	Din8 = 1'b0;
+	Din8 = #370000 1'b1;
+	Din8 = #60000 1'b0;
 end 
 
-// A11
+// Din9
 initial
 begin
-	A11 = 1'b0;
-end 
-
-// B0
-initial
-begin
-	B0 = 1'b0;
-end 
-
-// B1
-initial
-begin
-	B1 = 1'b0;
-end 
-
-// B2
-initial
-begin
-	B2 = 1'b0;
-end 
-
-// B3
-initial
-begin
-	B3 = 1'b0;
-end 
-
-// B4
-initial
-begin
-	B4 = 1'b0;
-end 
-
-// B5
-initial
-begin
-	B5 = 1'b0;
-end 
-
-// B6
-initial
-begin
-	B6 = 1'b0;
-end 
-
-// B7
-initial
-begin
-	B7 = 1'b0;
-end 
-
-// B8
-initial
-begin
-	B8 = 1'b0;
-end 
-
-// B9
-initial
-begin
-	B9 = 1'b1;
-	B9 = #20000 1'b0;
-end 
-
-// B10
-initial
-begin
-	B10 = 1'b0;
-end 
-
-// B11
-initial
-begin
-	B11 = 1'b0;
+	Din9 = 1'b0;
 end 
 endmodule
 
