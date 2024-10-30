@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LogicCircuit
-Wed Oct 16 18:24:05 2024
+Wed Oct 30 15:17:15 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,15 +13,11 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |week6_ex2_bdf|Decimal_to_binary:inst|week6_practice:inst|fstate
-  9. State Machine - |week6_ex2_bdf|week6_ex2:inst5|fstate
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Parameter Settings for User Entity Instance: week6_ex2:inst5
- 13. Parameter Settings for User Entity Instance: Decimal_to_binary:inst|week6_practice:inst
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -48,14 +44,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 16 18:24:05 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 30 15:17:15 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; LogicCircuit                                ;
-; Top-level Entity Name           ; week6_ex2_bdf                               ;
+; Top-level Entity Name           ; nine_week_2                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 23                                          ;
-; Total pins                      ; 18                                          ;
+; Total registers                 ; 20                                          ;
+; Total pins                      ; 27                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -74,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; week6_ex2_bdf      ; LogicCircuit       ;
+; Top-level entity name                                                           ; nine_week_2        ; LogicCircuit       ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -160,122 +156,78 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 8           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                 ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                       ; Library ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
-; fourbitregister.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/LogicCircuit/fourbitregister.bdf                                ;         ;
-; week5_ex2.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/LogicCircuit/week5_ex2.bdf                                      ;         ;
-; twobyfourdecoder.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/LogicCircuit/twobyfourdecoder.bdf                               ;         ;
-; Decimal_to_binary.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/LogicCircuit/Decimal_to_binary.bdf                              ;         ;
-; four_bit_counter.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/LogicCircuit/four_bit_counter.bdf                               ;         ;
-; week6_ex2_bdf.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/LogicCircuit/week6_ex2_bdf.bdf                                  ;         ;
-; mux41.bdf                        ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/others/maxplus2/mux41.bdf ;         ;
-; week6_ex2.v                      ; yes             ; Auto-Found Verilog HDL File        ; C:/LogicCircuit/week6_ex2.v                                        ;         ;
-; week6_practice.v                 ; yes             ; Auto-Found Verilog HDL File        ; C:/LogicCircuit/week6_practice.v                                   ;         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path               ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------+---------+
+; week10/trigger.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/LogicCircuit/week10/trigger.bdf         ;         ;
+; week10/nine_week_2.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/LogicCircuit/week10/nine_week_2.bdf     ;         ;
+; week10/mx_4bit_2x1.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/LogicCircuit/week10/mx_4bit_2x1.bdf     ;         ;
+; week10/mx_2x1.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/LogicCircuit/week10/mx_2x1.bdf          ;         ;
+; week10/four_bit_reg_ce.bdf       ; yes             ; User Block Diagram/Schematic File  ; C:/LogicCircuit/week10/four_bit_reg_ce.bdf ;         ;
+; week10/d2b.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/LogicCircuit/week10/d2b.bdf             ;         ;
+; week10/count_4.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/LogicCircuit/week10/count_4.bdf         ;         ;
+; week10/b2seg_bus.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/LogicCircuit/week10/b2seg_bus.bdf       ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 18          ;
-;                                             ;             ;
-; Combinational ALUT usage for logic          ; 27          ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 6           ;
-;     -- 5 input functions                    ; 7           ;
-;     -- 4 input functions                    ; 6           ;
-;     -- <=3 input functions                  ; 8           ;
-;                                             ;             ;
-; Dedicated logic registers                   ; 23          ;
-;                                             ;             ;
-; I/O pins                                    ; 18          ;
-;                                             ;             ;
-; Total DSP Blocks                            ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 32          ;
-; Total fan-out                               ; 223         ;
-; Average fan-out                             ; 2.59        ;
-+---------------------------------------------+-------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 17        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 24        ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 6         ;
+;     -- 5 input functions                    ; 3         ;
+;     -- 4 input functions                    ; 4         ;
+;     -- <=3 input functions                  ; 11        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 20        ;
+;                                             ;           ;
+; I/O pins                                    ; 27        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 20        ;
+; Total fan-out                               ; 206       ;
+; Average fan-out                             ; 2.10      ;
++---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                              ;
-+-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Entity Name       ; Library Name ;
-+-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+-------------------+--------------+
-; |week6_ex2_bdf                ; 27 (0)              ; 23 (0)                    ; 0                 ; 0          ; 18   ; 0            ; |week6_ex2_bdf                                       ; week6_ex2_bdf     ; work         ;
-;    |Decimal_to_binary:inst|   ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week6_ex2_bdf|Decimal_to_binary:inst                ; Decimal_to_binary ; work         ;
-;    |four_bit_counter:inst2|   ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |week6_ex2_bdf|four_bit_counter:inst2                ; four_bit_counter  ; work         ;
-;    |week5_ex2:inst3|          ; 12 (4)              ; 16 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |week6_ex2_bdf|week5_ex2:inst3                       ; week5_ex2         ; work         ;
-;       |fourbitregister:inst4| ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |week6_ex2_bdf|week5_ex2:inst3|fourbitregister:inst4 ; fourbitregister   ; work         ;
-;       |fourbitregister:inst5| ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |week6_ex2_bdf|week5_ex2:inst3|fourbitregister:inst5 ; fourbitregister   ; work         ;
-;       |fourbitregister:inst6| ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |week6_ex2_bdf|week5_ex2:inst3|fourbitregister:inst6 ; fourbitregister   ; work         ;
-;       |fourbitregister:inst|  ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |week6_ex2_bdf|week5_ex2:inst3|fourbitregister:inst  ; fourbitregister   ; work         ;
-;       |mux41:inst17|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week6_ex2_bdf|week5_ex2:inst3|mux41:inst17          ; mux41             ; work         ;
-;       |mux41:inst18|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week6_ex2_bdf|week5_ex2:inst3|mux41:inst18          ; mux41             ; work         ;
-;       |mux41:inst19|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week6_ex2_bdf|week5_ex2:inst3|mux41:inst19          ; mux41             ; work         ;
-;       |mux41:inst20|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week6_ex2_bdf|week5_ex2:inst3|mux41:inst20          ; mux41             ; work         ;
-;    |week6_ex2:inst5|          ; 7 (7)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |week6_ex2_bdf|week6_ex2:inst5                       ; week6_ex2         ; work         ;
-+-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+-------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name     ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+-----------------+--------------+
+; |nine_week_2                ; 24 (6)              ; 20 (0)                    ; 0                 ; 0          ; 27   ; 0            ; |nine_week_2                        ; nine_week_2     ; work         ;
+;    |b2seg_bus:inst23|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |nine_week_2|b2seg_bus:inst23       ; b2seg_bus       ; work         ;
+;    |count_4:inst9|          ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |nine_week_2|count_4:inst9          ; count_4         ; work         ;
+;    |d2b:inst|               ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |nine_week_2|d2b:inst               ; d2b             ; work         ;
+;    |four_bit_reg_ce:inst24| ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |nine_week_2|four_bit_reg_ce:inst24 ; four_bit_reg_ce ; work         ;
+;    |four_bit_reg_ce:inst25| ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |nine_week_2|four_bit_reg_ce:inst25 ; four_bit_reg_ce ; work         ;
+;    |four_bit_reg_ce:inst26| ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |nine_week_2|four_bit_reg_ce:inst26 ; four_bit_reg_ce ; work         ;
+;    |four_bit_reg_ce:inst27| ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |nine_week_2|four_bit_reg_ce:inst27 ; four_bit_reg_ce ; work         ;
+;    |mx_4bit_2x1:inst44|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |nine_week_2|mx_4bit_2x1:inst44     ; mx_4bit_2x1     ; work         ;
+;    |trigger:inst2|          ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |nine_week_2|trigger:inst2          ; trigger         ; work         ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------+
-; State Machine - |week6_ex2_bdf|Decimal_to_binary:inst|week6_practice:inst|fstate ;
-+---------------+------------------------------------------------------------------+
-; Name          ; fstate.state2                                                    ;
-+---------------+------------------------------------------------------------------+
-; fstate.state1 ; 0                                                                ;
-; fstate.state2 ; 1                                                                ;
-+---------------+------------------------------------------------------------------+
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------+
-; State Machine - |week6_ex2_bdf|week6_ex2:inst5|fstate                                         ;
-+---------------+---------------+---------------+---------------+---------------+---------------+
-; Name          ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ; fstate.state5 ;
-+---------------+---------------+---------------+---------------+---------------+---------------+
-; fstate.state1 ; 0             ; 0             ; 0             ; 0             ; 0             ;
-; fstate.state2 ; 0             ; 0             ; 1             ; 1             ; 0             ;
-; fstate.state3 ; 0             ; 1             ; 0             ; 1             ; 0             ;
-; fstate.state4 ; 1             ; 0             ; 0             ; 1             ; 0             ;
-; fstate.state5 ; 0             ; 0             ; 0             ; 1             ; 1             ;
-+---------------+---------------+---------------+---------------+---------------+---------------+
-
-
-+-------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                              ;
-+----------------------------------------------------------+--------------------------------------+
-; Register name                                            ; Reason for Removal                   ;
-+----------------------------------------------------------+--------------------------------------+
-; Decimal_to_binary:inst|week6_practice:inst|fstate.state2 ; Stuck at GND due to stuck port clock ;
-; Decimal_to_binary:inst|week6_practice:inst|fstate~3      ; Lost fanout                          ;
-; week6_ex2:inst5|fstate~2                                 ; Lost fanout                          ;
-; week6_ex2:inst5|fstate~3                                 ; Lost fanout                          ;
-; week6_ex2:inst5|fstate~5                                 ; Lost fanout                          ;
-; week6_ex2:inst5|fstate~6                                 ; Lost fanout                          ;
-; Total Number of Removed Registers = 6                    ;                                      ;
-+----------------------------------------------------------+--------------------------------------+
 
 
 +------------------------------------------------------+
@@ -283,39 +235,23 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 23    ;
-; Number of registers using Synchronous Clear  ; 3     ;
+; Total registers                              ; 20    ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 18    ;
+; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 18    ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: week6_ex2:inst5 ;
-+----------------+-------+-------------------------------------+
-; Parameter Name ; Value ; Type                                ;
-+----------------+-------+-------------------------------------+
-; state1         ; 0     ; Signed Integer                      ;
-; state2         ; 1     ; Signed Integer                      ;
-; state3         ; 2     ; Signed Integer                      ;
-; state4         ; 3     ; Signed Integer                      ;
-; state5         ; 4     ; Signed Integer                      ;
-+----------------+-------+-------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Decimal_to_binary:inst|week6_practice:inst ;
-+----------------+-------+----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                           ;
-+----------------+-------+----------------------------------------------------------------+
-; state1         ; 0     ; Signed Integer                                                 ;
-; state2         ; 1     ; Signed Integer                                                 ;
-+----------------+-------+----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |nine_week_2|mx_4bit_2x1:inst44|inst9 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -323,22 +259,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 23                          ;
-;     ENA CLR           ; 18                          ;
-;     SCLR              ; 3                           ;
-;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 27                          ;
-;     normal            ; 27                          ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 6                           ;
-;         5 data inputs ; 7                           ;
+; arriav_ff             ; 20                          ;
+;     CLR               ; 4                           ;
+;     ENA CLR           ; 16                          ;
+; arriav_lcell_comb     ; 28                          ;
+;     normal            ; 28                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 3                           ;
 ;         6 data inputs ; 6                           ;
-; boundary_port         ; 18                          ;
+; boundary_port         ; 27                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.67                        ;
+; Average LUT depth     ; 1.65                        ;
 +-----------------------+-----------------------------+
 
 
@@ -357,113 +293,59 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 16 18:23:54 2024
+    Info: Processing started: Wed Oct 30 15:17:10 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LogicCircuit -c LogicCircuit
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file decimaltobinaryencoder.bdf
-    Info (12023): Found entity 1: decimalToBinaryEncoder
-Info (12021): Found 1 design units, including 1 entities, in source file twobitcomparator.bdf
-    Info (12023): Found entity 1: twobitcomparator
-Info (12021): Found 1 design units, including 1 entities, in source file fulladder.bdf
-    Info (12023): Found entity 1: fulladder
-Info (12021): Found 1 design units, including 1 entities, in source file fourbitripplecarryadder.bdf
-    Info (12023): Found entity 1: fourbitripplecarryadder
-Info (12021): Found 1 design units, including 1 entities, in source file week3_ex2.bdf
-    Info (12023): Found entity 1: week3_ex2
-Info (12021): Found 1 design units, including 1 entities, in source file week3_ex3.bdf
-    Info (12023): Found entity 1: week3_ex3
-Info (12021): Found 1 design units, including 1 entities, in source file week4_ex1.bdf
-    Info (12023): Found entity 1: week4_ex1
-Info (12021): Found 1 design units, including 1 entities, in source file week4_ex1_2.bdf
-    Info (12023): Found entity 1: week4_ex1_2
-Info (12021): Found 1 design units, including 1 entities, in source file week4_ex2.bdf
-    Info (12023): Found entity 1: week4_ex2
-Info (12021): Found 1 design units, including 1 entities, in source file week4_ex3.bdf
-    Info (12023): Found entity 1: week4_ex3
-Info (12021): Found 1 design units, including 1 entities, in source file week4_ex4.bdf
-    Info (12023): Found entity 1: week4_ex4
-Info (12021): Found 1 design units, including 1 entities, in source file week4_ex5.bdf
-    Info (12023): Found entity 1: week4_ex5
-Info (12021): Found 1 design units, including 1 entities, in source file fourbitregister.bdf
-    Info (12023): Found entity 1: fourbitregister
-Info (12021): Found 1 design units, including 1 entities, in source file week5_ex2.bdf
-    Info (12023): Found entity 1: week5_ex2
-Info (12021): Found 1 design units, including 1 entities, in source file twobyfourdecoder.bdf
-    Info (12023): Found entity 1: twobyfourdecoder
-Info (12021): Found 1 design units, including 1 entities, in source file counter10.bdf
-    Info (12023): Found entity 1: counter10
-Info (12021): Found 1 design units, including 1 entities, in source file decimal_to_binary.bdf
-    Info (12023): Found entity 1: Decimal_to_binary
-Info (12021): Found 1 design units, including 1 entities, in source file four_bit_counter.bdf
-    Info (12023): Found entity 1: four_bit_counter
-Info (12021): Found 1 design units, including 1 entities, in source file week6_ex1_bdf.bdf
-    Info (12023): Found entity 1: week6_ex1_bdf
-Info (12021): Found 1 design units, including 1 entities, in source file week6_ex2_bdf.bdf
-    Info (12023): Found entity 1: week6_ex2_bdf
-Info (12127): Elaborating entity "week6_ex2_bdf" for the top level hierarchy
-Info (12128): Elaborating entity "week5_ex2" for hierarchy "week5_ex2:inst3"
-Warning (275083): Bus "Dout1[0]" found using same base name as "Dout", which might lead to a name conflict.
-Warning (275083): Bus "Dout1[1]" found using same base name as "Dout", which might lead to a name conflict.
-Warning (275083): Bus "Dout1[2]" found using same base name as "Dout", which might lead to a name conflict.
-Warning (275083): Bus "Dout1[3]" found using same base name as "Dout", which might lead to a name conflict.
-Warning (275083): Bus "Dout2[3..0]" found using same base name as "Dout", which might lead to a name conflict.
-Warning (275083): Bus "Dout2[1]" found using same base name as "Dout", which might lead to a name conflict.
-Warning (275083): Bus "Dout2[2]" found using same base name as "Dout", which might lead to a name conflict.
-Warning (275083): Bus "Dout2[3]" found using same base name as "Dout", which might lead to a name conflict.
-Warning (275083): Bus "Dout3[3..0]" found using same base name as "Dout", which might lead to a name conflict.
-Warning (275083): Bus "Dout3[2]" found using same base name as "Dout", which might lead to a name conflict.
-Warning (275083): Bus "Dout3[3]" found using same base name as "Dout", which might lead to a name conflict.
-Warning (275083): Bus "Dout3[0]" found using same base name as "Dout", which might lead to a name conflict.
-Warning (275083): Bus "Dout1[3..0]" found using same base name as "Dout", which might lead to a name conflict.
-Warning (275083): Bus "Dout2[0]" found using same base name as "Dout", which might lead to a name conflict.
-Warning (275083): Bus "Dout3[1]" found using same base name as "Dout", which might lead to a name conflict.
-Warning (275011): Block or symbol "MUX41" of instance "inst17" overlaps another block or symbol
-Warning (275011): Block or symbol "MUX41" of instance "inst19" overlaps another block or symbol
-Warning (275080): Converted elements in bus name "Dout" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "Dout[3..0]" to "Dout3..0"
-Warning (275080): Converted elements in bus name "Dout1" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "Dout1[0]" to "Dout10"
-    Warning (275081): Converted element name(s) from "Dout1[1]" to "Dout11"
-    Warning (275081): Converted element name(s) from "Dout1[2]" to "Dout12"
-    Warning (275081): Converted element name(s) from "Dout1[3]" to "Dout13"
-    Warning (275081): Converted element name(s) from "Dout1[3..0]" to "Dout13..0"
-Warning (275080): Converted elements in bus name "Dout2" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "Dout2[3..0]" to "Dout23..0"
-    Warning (275081): Converted element name(s) from "Dout2[1]" to "Dout21"
-    Warning (275081): Converted element name(s) from "Dout2[2]" to "Dout22"
-    Warning (275081): Converted element name(s) from "Dout2[3]" to "Dout23"
-    Warning (275081): Converted element name(s) from "Dout2[0]" to "Dout20"
-Warning (275080): Converted elements in bus name "Dout3" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "Dout3[3..0]" to "Dout33..0"
-    Warning (275081): Converted element name(s) from "Dout3[2]" to "Dout32"
-    Warning (275081): Converted element name(s) from "Dout3[3]" to "Dout33"
-    Warning (275081): Converted element name(s) from "Dout3[0]" to "Dout30"
-    Warning (275081): Converted element name(s) from "Dout3[1]" to "Dout31"
-Info (12128): Elaborating entity "MUX41" for hierarchy "week5_ex2:inst3|MUX41:inst20"
-Info (12130): Elaborated megafunction instantiation "week5_ex2:inst3|MUX41:inst20"
-Info (12128): Elaborating entity "fourbitregister" for hierarchy "week5_ex2:inst3|fourbitregister:inst6"
-Info (12128): Elaborating entity "twobyfourdecoder" for hierarchy "week5_ex2:inst3|twobyfourdecoder:inst30"
-Warning (12125): Using design file week6_ex2.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: week6_ex2 File: C:/LogicCircuit/week6_ex2.v Line: 23
-Info (12128): Elaborating entity "week6_ex2" for hierarchy "week6_ex2:inst5"
-Info (12128): Elaborating entity "Decimal_to_binary" for hierarchy "Decimal_to_binary:inst"
-Warning (12125): Using design file week6_practice.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: week6_practice File: C:/LogicCircuit/week6_practice.v Line: 23
-Info (12128): Elaborating entity "week6_practice" for hierarchy "Decimal_to_binary:inst|week6_practice:inst"
-Info (12128): Elaborating entity "four_bit_counter" for hierarchy "four_bit_counter:inst2"
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file week10/trigger.bdf
+    Info (12023): Found entity 1: trigger
+Info (12021): Found 1 design units, including 1 entities, in source file week10/pnu_clk_div.v
+    Info (12023): Found entity 1: PNU_CLK_DIV File: C:/LogicCircuit/week10/PNU_CLK_DIV.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file week10/nine_week_2.bdf
+    Info (12023): Found entity 1: nine_week_2
+Info (12021): Found 1 design units, including 1 entities, in source file week10/mx_4bit_2x1.bdf
+    Info (12023): Found entity 1: mx_4bit_2x1
+Info (12021): Found 1 design units, including 1 entities, in source file week10/mx_2x1.bdf
+    Info (12023): Found entity 1: mx_2x1
+Info (12021): Found 1 design units, including 1 entities, in source file week10/four_bit_reg_ce.bdf
+    Info (12023): Found entity 1: four_bit_reg_ce
+Info (12021): Found 1 design units, including 1 entities, in source file week10/d2b.bdf
+    Info (12023): Found entity 1: d2b
+Info (12021): Found 1 design units, including 1 entities, in source file week10/count_4.bdf
+    Info (12023): Found entity 1: count_4
+Info (12021): Found 1 design units, including 1 entities, in source file week10/b2seg_bus.bdf
+    Info (12023): Found entity 1: b2seg_bus
+Info (12021): Found 1 design units, including 1 entities, in source file week10/nine_week_1.bdf
+    Info (12023): Found entity 1: nine_week_1
+Info (12127): Elaborating entity "nine_week_2" for the top level hierarchy
+Warning (275011): Block or symbol "NOT" of instance "inst28" overlaps another block or symbol
+Info (12128): Elaborating entity "b2seg_bus" for hierarchy "b2seg_bus:inst23"
+Warning (275011): Block or symbol "AND2" of instance "inst11" overlaps another block or symbol
+Warning (275011): Block or symbol "OR2" of instance "inst19" overlaps another block or symbol
+Warning (275008): Primitive "NOT" of instance "inst" not used
+Info (12128): Elaborating entity "mx_4bit_2x1" for hierarchy "mx_4bit_2x1:inst44"
+Warning (275011): Block or symbol "AND2" of instance "inst5" overlaps another block or symbol
+Info (12128): Elaborating entity "count_4" for hierarchy "count_4:inst9"
+Info (12128): Elaborating entity "four_bit_reg_ce" for hierarchy "four_bit_reg_ce:inst24"
+Info (12128): Elaborating entity "mx_2x1" for hierarchy "four_bit_reg_ce:inst24|mx_2x1:inst10"
+Info (12128): Elaborating entity "trigger" for hierarchy "trigger:inst2"
+Info (12128): Elaborating entity "d2b" for hierarchy "d2b:inst"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "com5" is stuck at VCC
+    Warning (13410): Pin "com6" is stuck at VCC
+    Warning (13410): Pin "com7" is stuck at VCC
+    Warning (13410): Pin "com8" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 61 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 43 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
-    Info: Peak virtual memory: 4854 megabytes
-    Info: Processing ended: Wed Oct 16 18:24:05 2024
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:25
+Info (21057): Implemented 64 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 15 output pins
+    Info (21061): Implemented 37 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4902 megabytes
+    Info: Processing ended: Wed Oct 30 15:17:15 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
 
 

@@ -4,63 +4,67 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Dout[3]",
+					"name" : "a",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[2]",
+					"name" : "b",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[1]",
+					"name" : "c",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[0]",
+					"name" : "d",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "e",
 					"strict" : false
 				},
 				{
-					"name" : "keypad[9]",
+					"name" : "f",
 					"strict" : false
 				},
 				{
-					"name" : "keypad[3]",
+					"name" : "g",
 					"strict" : false
 				},
 				{
-					"name" : "keypad[1]",
+					"name" : "com1",
 					"strict" : false
 				},
 				{
-					"name" : "keypad[7]",
+					"name" : "com2",
 					"strict" : false
 				},
 				{
-					"name" : "keypad[5]",
+					"name" : "com3",
 					"strict" : false
 				},
 				{
-					"name" : "keypad[8]",
+					"name" : "com4",
 					"strict" : false
 				},
 				{
-					"name" : "keypad[2]",
+					"name" : "Din0",
 					"strict" : false
 				},
 				{
-					"name" : "keypad[0]",
+					"name" : "Din3",
 					"strict" : false
 				},
 				{
-					"name" : "keypad[6]",
+					"name" : "Din7",
 					"strict" : false
 				},
 				{
-					"name" : "keypad[4]",
+					"name" : "Din2",
+					"strict" : false
+				},
+				{
+					"name" : "Din6",
 					"strict" : false
 				},
 				{
@@ -68,11 +72,27 @@
 					"strict" : false
 				},
 				{
-					"name" : "keypad[10]",
+					"name" : "rst",
 					"strict" : false
 				},
 				{
-					"name" : "keypad[11]",
+					"name" : "Din9",
+					"strict" : false
+				},
+				{
+					"name" : "Din8",
+					"strict" : false
+				},
+				{
+					"name" : "Din1",
+					"strict" : false
+				},
+				{
+					"name" : "Din5",
+					"strict" : false
+				},
+				{
+					"name" : "Din4",
 					"strict" : false
 				}
 			]

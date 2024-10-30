@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CGXFC7C7F23C8
-set_global_assignment -name TOP_LEVEL_ENTITY week6_ex1_bdf
+set_global_assignment -name TOP_LEVEL_ENTITY nine_week_2
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:08:23  SEPTEMBER 24, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -49,34 +49,16 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name BDF_FILE decimaltobinaryencoder.bdf
-set_global_assignment -name BDF_FILE twobitcomparator.bdf
-set_global_assignment -name BDF_FILE fulladder.bdf
-set_global_assignment -name BDF_FILE fourbitripplecarryadder.bdf
-set_global_assignment -name BDF_FILE week3_ex2.bdf
-set_global_assignment -name BDF_FILE week3_ex3.bdf
-set_global_assignment -name BDF_FILE week4_ex1.bdf
-set_global_assignment -name BDF_FILE week4_ex1_2.bdf
-set_global_assignment -name BDF_FILE week4_ex2.bdf
-set_global_assignment -name BDF_FILE week4_ex3.bdf
-set_global_assignment -name BDF_FILE week4_ex4.bdf
-set_global_assignment -name BDF_FILE week4_ex5.bdf
-set_global_assignment -name BDF_FILE fourbitregister.bdf
-set_global_assignment -name BDF_FILE week5_ex2.bdf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
-set_global_assignment -name BDF_FILE twobyfourdecoder.bdf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
-set_global_assignment -name BDF_FILE counter10.bdf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
-set_global_assignment -name BDF_FILE Decimal_to_binary.bdf
-set_global_assignment -name BDF_FILE four_bit_counter.bdf
-set_global_assignment -name SMF_FILE week6_practice.smf
-set_global_assignment -name SMF_FILE week6_ex1.smf
-set_global_assignment -name BDF_FILE week6_ex1_bdf.bdf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
-set_global_assignment -name BDF_FILE week6_ex2_bdf.bdf
-set_global_assignment -name SMF_FILE week6_ex2.smf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
+set_global_assignment -name BDF_FILE week10/trigger.bdf
+set_global_assignment -name VERILOG_FILE week10/PNU_CLK_DIV.v
+set_global_assignment -name BDF_FILE week10/nine_week_2.bdf
+set_global_assignment -name BDF_FILE week10/mx_4bit_2x1.bdf
+set_global_assignment -name BDF_FILE week10/mx_2x1.bdf
+set_global_assignment -name BDF_FILE week10/four_bit_reg_ce.bdf
+set_global_assignment -name BDF_FILE week10/d2b.bdf
+set_global_assignment -name BDF_FILE week10/count_4.bdf
+set_global_assignment -name BDF_FILE week10/b2seg_bus.bdf
+set_global_assignment -name BDF_FILE week10/nine_week_1.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
