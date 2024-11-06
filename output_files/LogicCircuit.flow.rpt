@@ -1,5 +1,5 @@
 Flow report for LogicCircuit
-Wed Nov 06 18:07:38 2024
+Wed Nov 06 18:37:36 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,25 +41,25 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Nov 06 18:07:38 2024       ;
+; Flow Status                     ; Successful - Wed Nov 06 18:37:36 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; LogicCircuit                                ;
 ; Top-level Entity Name           ; number_comparator_test                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
+; Logic utilization (in ALMs)     ; 4 / 56,480 ( < 1 % )                        ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 17                                          ;
+; Total pins                      ; 17 / 268 ( 6 % )                            ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
+; Total block memory bits         ; 0 / 7,024,640 ( 0 % )                       ;
+; Total DSP Blocks                ; 0 / 156 ( 0 % )                             ;
+; Total HSSI RX PCSs              ; 0 / 6 ( 0 % )                               ;
+; Total HSSI PMA RX Deserializers ; 0 / 6 ( 0 % )                               ;
+; Total HSSI TX PCSs              ; 0 / 6 ( 0 % )                               ;
+; Total HSSI PMA TX Serializers   ; 0 / 6 ( 0 % )                               ;
+; Total PLLs                      ; 0 / 13 ( 0 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
 +---------------------------------+---------------------------------------------+
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/06/2024 18:07:33 ;
+; Start date & time ; 11/06/2024 18:36:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LogicCircuit        ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+------------------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name            ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 127913735830313.173088405321232        ; --            ; --                     ; --         ;
+; COMPILER_SIGNATURE_ID               ; 150241222110888.173088579304344        ; --            ; --                     ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --                     ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --                     ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; number_comparator_test ; Top        ;
@@ -97,8 +97,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4830 MB             ; 00:00:03                           ;
-; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:03                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4831 MB             ; 00:00:22                           ;
+; Fitter               ; 00:00:29     ; 1.0                     ; 7056 MB             ; 00:01:30                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4712 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4722 MB             ; 00:00:01                           ;
+; Total                ; 00:00:39     ; --                      ; --                  ; 00:01:54                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -107,7 +110,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-2B48VLE  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-NCR04TR  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-NCR04TR  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-NCR04TR  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-NCR04TR  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -115,6 +121,10 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off LogicCircuit -c LogicCircuit
+quartus_fit --read_settings_files=off --write_settings_files=off LogicCircuit -c LogicCircuit
+quartus_eda --read_settings_files=off --write_settings_files=off LogicCircuit -c LogicCircuit
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicCircuit -c LogicCircuit --vector_source=C:/LogicCircuit/Waveform7.vwf --testbench_file=C:/LogicCircuit/simulation/qsim/Waveform7.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/LogicCircuit/simulation/qsim/ LogicCircuit -c LogicCircuit
 
 
 
